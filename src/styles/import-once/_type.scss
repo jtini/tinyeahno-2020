@@ -1,0 +1,28 @@
+.title {
+    @extend %title;
+};
+
+.subtitle {
+    @extend %subtitle;
+};
+
+.headline {
+    @extend %headline;
+};
+
+.subheadline {
+    @extend %subheadline;
+};
+
+.large-body {
+    @extend %large-body;
+};
+
+.body,
+p {
+    @extend %body;
+};
+
+.small-body {
+    @extend %small-body;
+};

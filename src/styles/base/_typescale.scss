@@ -1,0 +1,61 @@
+@import "~modularscale-sass/stylesheets/modularscale";
+
+$modularscale: (
+    base: 1rem,
+    ratio: 1.25,
+    desktop: (
+
+    base: 1.25rem,
+    ratio: 1.33
+    )
+);
+
+
+@mixin typescale($step: 0) {
+    font-size: ms($step);
+
+    @media screen and (min-width: 760px) {
+        font-size: ms($step, $thread: desktop);
+    }
+}
+
+$line-height: 1.3;
+$line-height-xs: 1.0625;
+$line-height-s: 1.125;
+
+%title {
+    @include typescale(5);
+    line-height: $line-height-xs;
+    letter-spacing: -1px;
+}
+
+%subtitle {
+    @include typescale(4);
+    line-height: $line-height-xs;
+    letter-spacing: -1px;
+}
+
+%headline {
+    @include typescale(3);
+    line-height: $line-height-s;
+}
+
+%subheadline {
+    @include typescale(2);
+    line-height: $line-height-s;
+}
+
+%large-body {
+    @include typescale(1);
+    line-height: $line-height;
+}
+
+%body {
+    @include typescale(0);
+    line-height: $line-height;
+}
+
+%small-body {
+    @include typescale(-1);
+    line-height: $line-height;
+}
