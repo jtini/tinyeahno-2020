@@ -1,1 +1,5 @@
-@import "import-once/reset"
+@import "base";
+
+@import "import-once/reset";
+@import "import-once/global";
+@import "import-once/type";
