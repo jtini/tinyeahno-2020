@@ -3,6 +3,9 @@
 *:after { box-sizing: border-box; }
 
 body {
+    font-family: $ff-base;
+    background-color: $bg-light;
+    color: $text-on-light;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

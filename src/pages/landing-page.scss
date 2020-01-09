@@ -1,0 +1,119 @@
+@import "../styles/base";
+
+.landing-page__hero,
+.landing-page__content {
+    padding: 1rem;
+
+    > * {
+        max-width: 42.5rem;
+        margin-left: auto;
+        margin-right: auto;
+
+        + * {
+            padding-top: 1rem;
+        }
+    }
+
+    @media screen and (min-width: 500px) {
+        padding: 1.5rem;
+
+        > * + * { padding-top: 1.5rem; }
+    }
+}
+
+.landing-page__hero {
+    background-color: $bg-yellow;
+    color: $text-on-yellow;
+
+    @media screen and (min-width: 1000px) {
+        position: fixed;
+        max-width: 26rem;
+        min-height: 100vh;
+    }
+}
+
+.landing-page__content {
+    @media screen and (min-width: 1000px) {
+        margin-left: 26rem;
+        padding: 2rem;
+
+        > * {
+            max-width: 48rem;
+
+            + * { padding-top: 2rem; }
+        }
+    }
+}
+
+.social-icon-link + .social-icon-link {
+    margin-left: 0.5rem;
+}
+
+.case-study-summary + .case-study-summary {
+    padding-top: 2rem;
+
+    @media screen and (min-width: 1000px) {
+        padding-top: 6rem;
+    }
+}
+
+.case-study-summary__image-link,
+.shot__image-link {
+    display: inline-block;
+    line-height: 0;
+}
+
+.case-study-summary__image,
+.shot__image {
+    max-width: 100%;
+    height: auto;
+    line-height: 0;
+}
+
+.case-study-summary__title,
+.case-study-summary__description {
+    margin-top: 0.5rem;
+}
+
+.case-study-summary__link,
+.shots__link {
+    display: inline-block;
+    padding: 0.75rem 0;
+    color: $primary;
+    text-decoration: none;
+}
+
+.shots {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+
+    @media screen and (min-width: 1000px) {
+        padding: 6rem 0;
+    }
+}
+
+.shots__description {
+    margin-top: 0.5rem;
+}
+
+.shots__grid {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.shot__image-link {
+    width: calc(50% - 0.5rem);
+    margin-top: 1rem;
+
+    &:nth-child(odd) {
+        margin-right: 0.5rem;
+    }
+
+    &:nth-child(even) {
+        margin-left: 0.5rem;
+    }
+}
+
+.shots__link {
+    margin-top: 1rem;
+}
