@@ -10,6 +10,10 @@ const instagramIcon = require('../assets/Instagram-Icon.svg')
 const behanceIcon = require('../assets/Behance-Icon.svg')
 const twitterIcon = require('../assets/Twitter-Icon.svg')
 
+const hwHero = require('../images/Heartwood-Hero@2x.png')
+const cinebodyHero = require('../images/Cinebody-Hero@2x.png')
+const geosureHero = require('../images/GeoSure-Hero@2x.png')
+
 const socials = {
   dribbble: {
     link: 'https://dribbble.com/jtini',
@@ -32,9 +36,9 @@ const socials = {
 const caseStudies = {
   heartwood: {
     image: {
-      src: 'https://via.placeholder.com/800x400',
-      width: 800,
-      height: 400
+      src: hwHero,
+      width: 768,
+      height: 384
     },
     title: 'Heartwood',
     description: 'The operating system for brick and mortar businesses',
@@ -42,9 +46,9 @@ const caseStudies = {
   },
   cinebody: {
     image: {
-      src: 'https://via.placeholder.com/800x400',
-      width: 800,
-      height: 400
+      src: cinebodyHero,
+      width: 768,
+      height: 384
     },
     title: 'Cinebody',
     description: 'Web app design for a global content creator',
@@ -52,13 +56,48 @@ const caseStudies = {
   },
   geosure: {
     image: {
-      src: 'https://via.placeholder.com/800x400',
-      width: 800,
-      height: 400
+      src: geosureHero,
+      width: 768,
+      height: 384
     },
     title: 'GeoSure',
     description: 'Native apps designed to empower world travelers',
     slug: 'geosure'
+  }
+}
+
+const shots = {
+  make: {
+    image: {
+      src: 'https://cdn.dribbble.com/users/2873040/screenshots/7006569/media/88e7e2f21b6434bc47595c5518d01732.png',
+      width: 400,
+      height: 300
+    },
+    href: 'https://dribbble.com/shots/7006569-Make'
+  },
+  tenOuttaTen: {
+    image: {
+      src: 'https://cdn.dribbble.com/users/2873040/screenshots/7998035/media/48e6182ecb25d09e45ff0b2a2b3b0115.png',
+      width: 400,
+      height: 300
+    },
+    href: 'https://dribbble.com/shots/7998035-Ten-Outta-Ten-Sketch'
+  },
+  stayFresh: {
+    image: {
+      src: 'https://cdn.dribbble.com/users/2873040/screenshots/7887013/media/a53afd7807363bbd15c5a79b45301180.png',
+      width: 400,
+      height: 300
+    },
+    href: 'https://dribbble.com/shots/7887013-Stay-Fresh'
+  },
+  scalableShadow: {
+    image: {
+      src: 'https://cdn.dribbble.com/users/2873040/screenshots/8195274/media/a017a5276d2ed46e1235a0e1a8317ec4.png',
+      width: 400,
+      height: 300
+    },
+    href: 'https://dribbble.com/shots/8195274-Scalable-Shadow'
   }
 }
 
@@ -108,9 +147,36 @@ const IndexPage = () => (
         )
       })}
 
+      <div className="shots">
+        <h2 className="shots__title headline bold">Odds & Ends</h2>
+        <p className="shots__description large-body c-text-on-light-subdued">Illustrations, lettering, icons, and other visual work.</p>
 
-      <h2 className="headline bold">Odds & Ends</h2>
-      <p className="body">Illustrations, lettering, icons, and other visual work.</p>
+        <div className="shots__grid">
+
+          {Object.keys(shots).map(key => {
+            const shot = shots[key];
+
+            return (
+              <a
+                key={key}
+                href={shot.href}
+                target="_blank"
+                className="shot__image-link"
+              >
+                <img
+                  src={shot.image.src}
+                  width={shot.image.width}
+                  height={shot.image.height}
+                  className="shot__image"
+                />
+              </a>
+            )
+          })}
+
+        </div>
+        <a href="https://dribbble.com/jtini" target="_blank" className="shots__link body">More on Dribbble</a>
+
+      </div>
     </section>
   </Layout>
 )
