@@ -1,2 +1,18 @@
 $ff-base: work-sans, Helvetica, Arial, sans-serif;
 $ff-display: moret, Georgia, serif;
+
+%book {
+    font-weight: 300;
+}
+
+%normal {
+    font-weight: 400;
+}
+
+%bold {
+    font-weight: 600;
+}
+
+%display {
+    font-family: $ff-display;
+}

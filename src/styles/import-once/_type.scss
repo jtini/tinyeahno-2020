@@ -26,3 +26,20 @@ p {
 .small-body {
     @extend %small-body;
 };
+
+.normal {
+    @extend %normal;
+};
+
+.book {
+    @extend %book;
+};
+
+.bold {
+    @extend %bold;
+};
+
+.display {
+    @extend %display;
+    @extend %book;
+};
