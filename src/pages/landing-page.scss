@@ -1,11 +1,8 @@
 @import "../styles/base";
 
-// Landing Page Hero
-.landing-page__hero {
+.landing-page__hero,
+.landing-page__content {
     padding: 1.5rem;
-    position: relative;
-    background-color: $bg-yellow;
-    color: $text-on-yellow;
 
     > * {
         max-width: 42.5rem;
@@ -16,10 +13,26 @@
             padding-top: 1.5rem;
         }
     }
+}
+
+.landing-page__hero {
+    background-color: $bg-yellow;
+    color: $text-on-yellow;
 
     @media screen and (min-width: 1000px) {
+        position: fixed;
         max-width: 26rem;
         min-height: 100vh;
+    }
+}
+
+.landing-page__content {
+    @media screen and (min-width: 1000px) {
+        margin-left: 26rem;
+
+        > * {
+            max-width: 48rem;
+        }
     }
 }
 

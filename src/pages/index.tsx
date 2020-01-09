@@ -51,6 +51,13 @@ const IndexPage = () => (
       </div>
       <p className="body c-text-on-yellow-subdued">© Jeremy Tinianow 2020</p>
     </section>
+    <section className="landing-page__content">
+      <h2 className="headline bold">Case Studies</h2>
+
+
+      <h2 className="headline bold">Odds & Ends</h2>
+      <p className="body">Illustrations, lettering, icons, and other visual work.</p>
+    </section>
   </Layout>
 )
 
