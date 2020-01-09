@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -28,6 +29,39 @@ const socials = {
   }
 }
 
+const caseStudies = {
+  heartwood: {
+    image: {
+      src: 'https://via.placeholder.com/800x400',
+      width: 800,
+      height: 400
+    },
+    title: 'Heartwood',
+    description: 'The operating system for brick and mortar businesses',
+    slug: 'heartwood'
+  },
+  cinebody: {
+    image: {
+      src: 'https://via.placeholder.com/800x400',
+      width: 800,
+      height: 400
+    },
+    title: 'Cinebody',
+    description: 'Web app design for a global content creator',
+    slug: 'cinebody'
+  },
+  geosure: {
+    image: {
+      src: 'https://via.placeholder.com/800x400',
+      width: 800,
+      height: 400
+    },
+    title: 'GeoSure',
+    description: 'Native apps designed to empower world travelers',
+    slug: 'geosure'
+  }
+}
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
@@ -53,6 +87,26 @@ const IndexPage = () => (
     </section>
     <section className="landing-page__content">
       <h2 className="headline bold">Case Studies</h2>
+
+      {Object.keys(caseStudies).map(key => {
+        const cs = caseStudies[key]
+
+        return (
+          <div key={key} className="case-study-summary">
+            <Link to={`/${cs.slug}`} className="case-study-summary__image-link">
+              <img
+                src={cs.image.src}
+                width={cs.image.width}
+                height={cs.image.height}
+                className="case-study-summary__image"
+              />
+            </Link>
+            <h3 className="case-study-summary__title headline display">{cs.title}</h3>
+            <p className="case-study-summary__description large-body c-text-on-light-subdued">{cs.description}</p>
+            <Link to={`/${cs.slug}`} className="case-study-summary__link body">Read Case Study</Link>
+          </div>
+        )
+      })}
 
 
       <h2 className="headline bold">Odds & Ends</h2>

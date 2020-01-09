@@ -2,7 +2,7 @@
 
 .landing-page__hero,
 .landing-page__content {
-    padding: 1.5rem;
+    padding: 1rem;
 
     > * {
         max-width: 42.5rem;
@@ -10,8 +10,14 @@
         margin-right: auto;
 
         + * {
-            padding-top: 1.5rem;
+            padding-top: 1rem;
         }
+    }
+
+    @media screen and (min-width: 500px) {
+        padding: 1.5rem;
+
+        > * + * { padding-top: 1.5rem; }
     }
 }
 
@@ -29,13 +35,47 @@
 .landing-page__content {
     @media screen and (min-width: 1000px) {
         margin-left: 26rem;
+        padding: 2rem;
 
         > * {
             max-width: 48rem;
+
+            + * { padding-top: 2rem; }
         }
     }
 }
 
 .social-icon-link + .social-icon-link {
     margin-left: 0.5rem;
+}
+
+.case-study-summary + .case-study-summary {
+    padding-top: 2rem;
+
+    @media screen and (min-width: 1000px) {
+        padding-top: 6rem;
+    }
+}
+
+.case-study-summary__image-link {
+    display: inline-block;
+    line-height: 0;
+}
+
+.case-study-summary__image {
+    max-width: 100%;
+    height: auto;
+    line-height: 0;
+}
+
+.case-study-summary__title,
+.case-study-summary__description {
+    margin-top: 0.5rem;
+}
+
+.case-study-summary__link {
+    display: inline-block;
+    padding: 0.75rem 0;
+    color: $primary;
+    text-decoration: none;
 }
