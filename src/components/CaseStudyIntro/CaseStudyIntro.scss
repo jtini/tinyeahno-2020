@@ -50,6 +50,6 @@
     font-size: ms(0);
 
     @media screen and (min-width: 760px) {
-        font-size: ms(1);
+        font-size: ms(1, $thread: desktop);
     }
 }

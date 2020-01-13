@@ -13,6 +13,13 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `page-images`,
+        path: `${__dirname}/src/pages`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -40,6 +47,20 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              quality: 70,
+              maxWidth: 1400,
+              linkImagesToOriginal: false,
+              sizeByPixelDensity: false,
+              showCaptions: true,
+              markdownCaptions: true,
+              withWebp: true
+            }
+          }
+        ],
         defaultLayouts: {
           default: require.resolve("./src/components/CaseStudyLayout/CaseStudyLayout.tsx")
         }

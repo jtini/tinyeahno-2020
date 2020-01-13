@@ -1,0 +1,9 @@
+@import "../../styles/base";
+
+
+.case-study__text {
+    @extend %body;
+    max-width: 47.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
