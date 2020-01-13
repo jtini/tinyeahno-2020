@@ -28,7 +28,7 @@ const QuoteBlock = (props: QuoteBlockProps) => {
         <blockquote>
             {quote && <p className="subheadline display">{quote}</p>}
             {attribution &&
-                <p className="small-body c-text-on-light-subdued">{attribution}</p>
+                <p className="attribution small-body c-text-on-light-subdued">{attribution}</p>
             }
         </blockquote>
     )

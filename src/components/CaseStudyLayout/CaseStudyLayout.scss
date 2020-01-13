@@ -1,9 +1,63 @@
 @import "../../styles/base";
 
+.case-study {
+    > * + * {
+        margin-top: 8rem;
+    }
+
+    .heading-wrapper + .text-wrapper {
+        margin-top: 0.5rem;
+    }
+
+    .text-wrapper + .text-wrapper {
+        margin-top: 1rem;
+    }
+
+    .text-wrapper + .list-wrapper {
+        margin-top: 0.75rem;
+    }
+
+    figcaption {
+        @extend %small-body;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-top: 0.5rem;
+        text-align: center;
+        color: $text-on-light-subdued;
+    }
+
+    @media screen and (min-width: 760px) {
+
+        .heading-wrapper + .text-wrapper {
+            margin-top: 1rem;
+        }
+
+        .text-wrapper + .text-wrapper {
+            margin-top: 2rem;
+        }
+    }
+}
 
 .case-study__text {
     @extend %body;
     max-width: 47.5rem;
     margin-left: auto;
     margin-right: auto;
+    line-height: $line-height-l;
+
+    blockquote & {
+        @extend %subheadline;
+        line-height: $line-height-l;
+        letter-spacing: -1px;
+        color: $text-on-light-subdued;
+    }
+}
+
+.case-study__list-item + .case-study__list-item {
+    margin-top: 0.75rem;
+}
+
+.case-study-text-link {
+    color: $primary;
+    text-decoration: none;
 }

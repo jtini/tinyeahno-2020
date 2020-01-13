@@ -16,7 +16,7 @@
         margin-top: 0.25rem;
     }
 
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: 760px) {
         padding-top: 6rem;
         padding-bottom: 6rem;
 
@@ -53,3 +53,5 @@
         font-size: ms(1, $thread: desktop);
     }
 }
+
+.attribution { margin-top: 0.5rem; }

@@ -11,26 +11,47 @@ const P = props => {
         return props.children
     }
     return (
-        <div className="wrapper"><p className="case-study__text case-study__body-copy" {...props} /></div>
+        <div className="wrapper text-wrapper"><p className="case-study__text case-study__body-copy" {...props} /></div>
     )
 }
 
 const H2 = props => {
     return (
-        <div className="wrapper"><h2 className="case-study__text case-study__body-heading bold" {...props} /></div>
+        <div className="wrapper heading-wrapper"><h2 className="case-study__text case-study__body-heading bold" {...props} /></div>
     )
 }
 
 const OL = props => {
     return (
-        <div className="wrapper"><ol className="case-study__text case-study__body-list" {...props} /></div>
+        <div className="wrapper list-wrapper"><ol className="case-study__text case-study__body-list" {...props} /></div>
     )
 }
+
+
+const UL = props => {
+    return (
+        <div className="wrapper list-wrapper"><ul className="case-study__text case-study__body-list" {...props} /></div>
+    )
+}
+
+const LI = props => {
+    return (
+        <li className="case-study__list-item" {...props} />
+    )
+}
+
+const Strong = props => <strong className="bold" {...props} />
+
+const Anchor = props => <a className="case-study-text-link" target="_blank" rel="noopener noreferrer" {...props} />
 
 const components = {
     h2: H2,
     p: P,
-    ol: OL
+    ol: OL,
+    ul: UL,
+    li: LI,
+    strong: Strong,
+    a: Anchor
 }
 
 const Template = (props: TemplateProps) => (
