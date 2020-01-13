@@ -1,5 +1,8 @@
 @import "../../styles/base";
 
+.case-study-intro {
+    position: relative;
+}
 
 .case-study-intro__inner {
     padding-top: 2rem;
@@ -55,3 +58,18 @@
 }
 
 .attribution { margin-top: 0.5rem; }
+
+.case-study-intro__home-link {
+    @extend %body;
+    display: inline-flex;
+    align-items: center;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.case-study-intro__home-text {
+    margin-left: 0.5rem;
+}
