@@ -2,7 +2,7 @@
 
 .case-study {
     > * + * {
-        margin-top: 8rem;
+        margin-top: 4rem;
     }
 
     .heading-wrapper + .text-wrapper {
@@ -27,6 +27,9 @@
     }
 
     @media screen and (min-width: 760px) {
+        > * + * {
+            margin-top: 8rem;
+        }
 
         .heading-wrapper + .text-wrapper {
             margin-top: 1rem;
