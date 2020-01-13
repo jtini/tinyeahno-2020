@@ -1,0 +1,89 @@
+import React, { Fragment } from 'react'
+
+import "./CaseStudyIntro.scss"
+
+interface TextBlockProps {
+    headline?: string,
+    text?: string
+}
+
+const TextBlock = (props: TextBlockProps) => {
+    const { headline, text } = props;
+    return (
+        <>
+            {headline && <h3 className="body bold">{headline}</h3>}
+            {text && <p className="body">{text}</p>}
+        </>
+    )
+}
+
+interface QuoteBlockProps {
+    quote?: string,
+    attribution?: string
+}
+
+const QuoteBlock = (props: QuoteBlockProps) => {
+    const { quote, attribution } = props;
+    return (
+        <blockquote>
+            {quote && <p className="subheadline display">{quote}</p>}
+            {attribution &&
+                <p className="small-body c-text-on-light-subdued">{attribution}</p>
+            }
+        </blockquote>
+    )
+}
+
+type HeroImage = {
+    src: string,
+    alt: string
+}
+
+type ContentPiece = {
+    kind: 'text' | 'quote',
+    headline?: string,
+    text?: string,
+    quote?: string,
+    attribution?: string
+}
+
+interface CaseStudyIntroProps {
+    title: string,
+    subtitle?: string,
+    image?: HeroImage,
+    content?: ContentPiece[]
+}
+
+const blocks = {
+    text: TextBlock,
+    quote: QuoteBlock
+}
+
+const CaseStudyIntro = (props: CaseStudyIntroProps) => {
+    const { title, subtitle, image, content } = props;
+    return (
+        <section className="case-study-intro wrapper">
+            <h1 className="case-study-intro__title title display">{title}</h1>
+            <p className="case-study-intro__subtitle">{subtitle}</p>
+            {content && content.length > 0 && content.map((entry, idx) => {
+                const Element = blocks[entry.kind]
+
+                if (!blocks[entry.kind]) {
+                    return null
+                }
+
+                return (
+                    <Fragment key={idx}>
+                        <Element {...entry} />
+                    </Fragment>
+                )
+            })}
+        </section>
+    )
+}
+
+CaseStudyIntro.defaultProps = {
+    content: []
+}
+
+export default CaseStudyIntro

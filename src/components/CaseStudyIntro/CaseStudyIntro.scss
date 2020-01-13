@@ -1,0 +1,27 @@
+@import "../../styles/base";
+
+
+.case-study-intro {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: $bg;
+
+    p + h3,
+    p + blockquote,
+    blockquote + p {
+        margin-top: 1.5rem;
+    }
+
+    h3 + p {
+        margin-top: 0.5rem;
+    }
+}
+
+.case-study-intro__subtitle {
+    margin-top: 0.25rem;
+    font-size: ms(0);
+
+    @media screen and (min-width: 760px) {
+        font-size: ms(1);
+    }
+}
