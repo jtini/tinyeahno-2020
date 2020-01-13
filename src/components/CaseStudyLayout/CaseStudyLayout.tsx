@@ -23,14 +23,14 @@ const H2 = props => {
 
 const OL = props => {
     return (
-        <div className="wrapper list-wrapper"><ol className="case-study__text case-study__body-list" {...props} /></div>
+        <div className="wrapper list-wrapper"><ol className="case-study__text case-study__body-list case-study__body-ol" {...props} /></div>
     )
 }
 
 
 const UL = props => {
     return (
-        <div className="wrapper list-wrapper"><ul className="case-study__text case-study__body-list" {...props} /></div>
+        <div className="wrapper list-wrapper"><ul className="case-study__text case-study__body-list case-study__body-ul" {...props} /></div>
     )
 }
 
