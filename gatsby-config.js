@@ -36,6 +36,7 @@ module.exports = {
           id: 'snu1mhw'
         }
       }
-    }
+    },
+    `gatsby-plugin-mdx`
   ],
 }
