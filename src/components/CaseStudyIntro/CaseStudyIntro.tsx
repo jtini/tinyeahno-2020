@@ -62,23 +62,35 @@ const blocks = {
 const CaseStudyIntro = (props: CaseStudyIntroProps) => {
     const { title, subtitle, image, content } = props;
     return (
-        <section className="case-study-intro wrapper">
-            <h1 className="case-study-intro__title title display">{title}</h1>
-            <p className="case-study-intro__subtitle">{subtitle}</p>
-            {content && content.length > 0 && content.map((entry, idx) => {
-                const Element = blocks[entry.kind]
+        <>
+            <section className="case-study-intro">
+                <img
+                    className="case-study-intro__hero-image"
+                    src={image.src}
+                    alt={image.alt}
+                    width={1400}
+                />
+                <div className="case-study-intro__inner wrapper">
+                    <div className="case-study-intro__container">
+                        <h1 className="case-study-intro__title title display">{title}</h1>
+                        <p className="case-study-intro__subtitle">{subtitle}</p>
+                        {content && content.length > 0 && content.map((entry, idx) => {
+                            const Element = blocks[entry.kind]
 
-                if (!blocks[entry.kind]) {
-                    return null
-                }
+                            if (!blocks[entry.kind]) {
+                                return null
+                            }
 
-                return (
-                    <Fragment key={idx}>
-                        <Element {...entry} />
-                    </Fragment>
-                )
-            })}
-        </section>
+                            return (
+                                <Fragment key={idx}>
+                                    <Element {...entry} />
+                                </Fragment>
+                            )
+                        })}
+                    </div>
+                </div>
+            </section>
+        </>
     )
 }
 
