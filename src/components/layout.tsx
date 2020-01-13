@@ -11,7 +11,7 @@ import "../styles/import-once.scss"
 
 import Header from "./header"
 
-const Layout = ({ children }: { children: any }) => {
+const Layout = ({ children, className }: { children: any, className?: string }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -24,7 +24,7 @@ const Layout = ({ children }: { children: any }) => {
 
   return (
     <div>
-      <main>{children}</main>
+      <main className={className}>{children}</main>
     </div>
   )
 }

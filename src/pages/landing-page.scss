@@ -1,5 +1,9 @@
 @import "../styles/base";
 
+.landing-page {
+    background-color: $bg;
+}
+
 .landing-page__hero,
 .landing-page__content {
     padding: 1rem;
@@ -23,7 +27,6 @@
 
 .landing-page__hero {
     background-color: $bg-yellow;
-    color: $text-on-yellow;
 
     @media screen and (min-width: 1000px) {
         position: fixed;
@@ -57,10 +60,21 @@
     }
 }
 
-.case-study-summary__image-link,
+.case-study-summary__link,
 .shot__image-link {
     display: inline-block;
     line-height: 0;
+    text-decoration: none;
+}
+
+.case-study-summary__link:hover {
+    .case-study-summary__image {
+        transform: scale(1.025);
+    }
+
+    .case-study-summary__text {
+        opacity: 0.75;
+    }
 }
 
 .case-study-summary__image,
@@ -68,14 +82,19 @@
     max-width: 100%;
     height: auto;
     line-height: 0;
+    box-shadow: 0 2px 24px rgba(0,0,0,0.1);
+    transition: transform 250ms ease;
+}
+
+.case-study-summary__text {
+    margin: 1rem 0;
 }
 
 .case-study-summary__title,
 .case-study-summary__description {
-    margin-top: 0.5rem;
+    display: inline;
 }
 
-.case-study-summary__link,
 .shots__link {
     display: inline-block;
     padding: 0.75rem 0;
@@ -111,6 +130,12 @@
 
     &:nth-child(even) {
         margin-left: 0.5rem;
+    }
+
+    &:hover {
+        .shot__image {
+            transform: scale(1.025);
+        }
     }
 }
 

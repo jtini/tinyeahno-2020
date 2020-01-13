@@ -102,12 +102,12 @@ const shots = {
 }
 
 const IndexPage = () => (
-  <Layout>
+  <Layout className="landing-page">
     <SEO title="Home" />
     <section className="landing-page__hero">
       <h1 className="title display">Tin Yeah No</h1>
       <p className="large-body">Jeremy Tinianow is a designer who believes in making things better than they need to be.</p>
-      <p className="body c-text-on-yellow-subdued">If you’re interested in working together, or just wanna say hi, reach out at <a href="mailto:jeremy@tinyeahno.com" className="c-text-on-yellow">jeremy@tinyeahno.com</a>.</p>
+      <p className="body">If you’re interested in working together, or just wanna say hi, reach out at <a href="mailto:jeremy@tinyeahno.com" className="c-text-on-yellow">jeremy@tinyeahno.com</a>.</p>
       <div className="social-links">
         {Object.keys(socials).map(key => {
           return (
@@ -122,7 +122,7 @@ const IndexPage = () => (
           )
         })}
       </div>
-      <p className="body c-text-on-yellow-subdued">© Jeremy Tinianow 2020</p>
+      <p className="body">© Jeremy Tinianow 2020</p>
     </section>
     <section className="landing-page__content">
       <h2 className="headline bold">Case Studies</h2>
@@ -132,17 +132,18 @@ const IndexPage = () => (
 
         return (
           <div key={key} className="case-study-summary">
-            <Link to={`/${cs.slug}`} className="case-study-summary__image-link">
+            <Link to={`/${cs.slug}`} className="case-study-summary__link">
               <img
                 src={cs.image.src}
                 width={cs.image.width}
                 height={cs.image.height}
                 className="case-study-summary__image"
               />
+              <div className="case-study-summary__text">
+                <h3 className="case-study-summary__title body bold">{`${cs.title} `}</h3>
+                <p className="case-study-summary__description body c-text-on-light-subdued">{cs.description}</p>
+              </div>
             </Link>
-            <h3 className="case-study-summary__title headline display">{cs.title}</h3>
-            <p className="case-study-summary__description large-body c-text-on-light-subdued">{cs.description}</p>
-            <Link to={`/${cs.slug}`} className="case-study-summary__link body">Read Case Study</Link>
           </div>
         )
       })}
