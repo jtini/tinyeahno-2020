@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import CaseStudyLink from '../components/CaseStudyLink/CaseStudyLink'
 import "./landing-page.scss"
 
 const hwHero = require('../images/Heartwood-Hero@2x.png')
@@ -98,21 +99,14 @@ const IndexPage = () => (
         const cs = caseStudies[key]
 
         return (
-          <div key={key} className="case-study-summary">
-            <Link to={`/${cs.slug}`} className="case-study-summary__link">
-              <img
-                src={cs.image.src}
-                width={cs.image.width}
-                height={cs.image.height}
-                className="case-study-summary__image"
-              />
-              <div className="case-study-summary__text">
-                <h2 className="case-study-summary__title body bold">{`${cs.title} `}</h2>
-                <p className="case-study-summary__description body">{cs.description}</p>
-                <p className="case-study-summary__tags small-body mono c-text-on-light-subdued">{cs.tags}</p>
-              </div>
-            </Link>
-          </div>
+          <CaseStudyLink
+            key={key}
+            slug={cs.slug}
+            image={cs.image}
+            title={cs.title}
+            description={cs.description}
+            tags={cs.tags}
+          />
         )
       })}
 
