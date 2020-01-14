@@ -1,6 +1,33 @@
 import React from 'react'
 import { MDXProvider } from "@mdx-js/react"
+import { Link } from "gatsby"
+import backArrow from '../../assets/Back-Arrow-White--20px.svg'
 import "./CaseStudyLayout.scss"
+
+const dribbbleIcon = require('../../assets/Dribbble-Icon.svg')
+const instagramIcon = require('../../assets/Instagram-Icon.svg')
+const behanceIcon = require('../../assets/Behance-Icon.svg')
+const twitterIcon = require('../../assets/Twitter-Icon.svg')
+
+const socials = {
+    dribbble: {
+        link: 'https://dribbble.com/jtini',
+        icon: dribbbleIcon
+    },
+    instagram: {
+        link: 'https://www.instagram.com/jermtee/',
+        icon: instagramIcon
+    },
+    behance: {
+        link: 'https://www.behance.net/jtinianow',
+        icon: behanceIcon
+    },
+    twitter: {
+        link: 'https://twitter.com/jtinianow',
+        icon: twitterIcon
+    }
+}
+
 
 interface TemplateProps {
     children: any
@@ -59,6 +86,31 @@ const Template = (props: TemplateProps) => (
         <div className="case-study">
             {props.children}
         </div>
+        <footer className="case-study-footer">
+            <div className="case-study-footer__links">
+                <Link to="/" className="case-study-footer__home-link">
+                    <img src={backArrow} width={20} height={20} />
+                    <span>Tin Yeah No</span>
+                </Link>
+                <a href="mailto:jeremy@tinyeahno.com" className="case-study-footer__mailto-link">jeremy@tinyeahno.com</a>
+                <div className="case-study-footer__social-links">
+
+                    {Object.keys(socials).map(key => {
+                        return (
+                            <a
+                                className="social-icon-link"
+                                href={socials[key].link}
+                                target="_blank"
+                                key={key}
+                            >
+                                <img src={socials[key].icon} className="social-icon" />
+                            </a>
+                        )
+                    })}
+                </div>
+            </div>
+            <p className="case-study-footer__copyright-text">© Jeremy Tinianow 2020</p>
+        </footer>
     </MDXProvider>
 )
 

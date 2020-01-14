@@ -100,3 +100,67 @@
         }
     }
 }
+
+.case-study-footer {
+    padding: 1rem;
+    background-color: $clay;
+    color: $bg;
+
+    @media screen and (min-width: 760px) {
+        padding: 4rem;
+    }
+}
+
+.case-study-footer__home-link {
+    @extend %body;
+    @extend %bold;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    text-decoration: none;
+
+    > span { margin-left: 0.25rem; }
+}
+
+.case-study-footer__mailto-link {
+    @extend %body;
+    display: inline-block;
+}
+
+.case-study-footer__mailto-link,
+.case-study-footer__social-links,
+.case-study-footer__copyright-text {
+    margin-top: 1rem;
+}
+
+.case-study-footer__mailto-link,
+.case-study-footer__social-links {
+    @media screen and (min-width: 760px) {
+        margin-top: 0;
+    }
+}
+
+.case-study-footer__copyright-text {
+    @extend %small-body;
+    opacity: 0.8;
+
+    @media screen and (min-width: 760px) {
+        margin-top: 4rem;
+    }
+}
+
+.case-study-footer__links,
+.case-study-footer__copyright-text {
+    text-align: center;
+}
+
+.case-study-footer__links {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    @media screen and (min-width: 760px) {
+        flex-flow: row;
+        justify-content: space-between;
+    }
+}
