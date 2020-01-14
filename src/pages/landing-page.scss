@@ -4,12 +4,57 @@
     background-color: $bg;
 }
 
-.landing-page__hero,
-.landing-page__content {
+.landing-page__hero {
+    padding: 2rem 1.5rem;
+
+    @media screen and (min-width: 760px) {
+        padding-bottom: 4rem;
+    }
+}
+
+.landing-page__hero-inner {
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.landing-page__hero-info {
+    display: flex;
+    flex-flow: column;
+
+    @media screen and (min-width: 370px) {
+        flex-flow: row;
+        justify-content: space-between;
+    }
+}
+
+.landing-page__hero-mailto {
+    margin-top: 0.25rem;
+
+    @media screen and (min-width: 370px) {
+        margin-top: 0;
+    }
+}
+
+.landing-page__hero-main {
+    padding-top: 1.5rem;
+
+    @media screen and (min-width: 760px) {
+        padding-top: 3rem;
+    }
+}
+
+.landing-page__hero {
+    background-color: $bg-yellow;
+}
+
+
+
+.case-study-grid {
     padding: 1rem;
 
-    > * {
-        max-width: 42.5rem;
+    > * {   
+        max-width: 46rem;
         margin-left: auto;
         margin-right: auto;
 
@@ -23,122 +68,100 @@
 
         > * + * { padding-top: 1.5rem; }
     }
-}
-
-.landing-page__hero {
-    background-color: $bg-yellow;
 
     @media screen and (min-width: 1000px) {
-        position: fixed;
-        max-width: 26rem;
-        min-height: 100vh;
+        padding-top: 4rem;
     }
 }
 
-.landing-page__content {
-    @media screen and (min-width: 1000px) {
-        margin-left: 26rem;
-        padding: 2rem;
+.landing-page-about {
+    padding: 1rem;
+    background-color: $text-on-light;
+    color: $bg;
 
-        > * {
-            max-width: 48rem;
+    @media screen and (min-width: 500px) {
+        padding: 1.5rem;
+    }
 
-            + * { padding-top: 2rem; }
-        }
+    @media screen and (min-width: 760px) {
+        padding-top: 4rem;
     }
 }
 
-.social-icon-link + .social-icon-link {
-    margin-left: 0.5rem;
+.landing-page-about__inner {
+    max-width: 46rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.case-study-summary + .case-study-summary {
-    padding-top: 2rem;
+.landing-page-about__subtitle,
+.landing-page-about__body,
+.landing-page-about__services-list-wrapper + .landing-page-about__services-list-wrapper,
+.landing-page-about__social {
+    padding-top: 1.5rem;
+}
 
-    @media screen and (min-width: 1000px) {
-        padding-top: 6rem;
+.landing-page-about__social {
+    @media screen and (min-width: 760px) {
+        padding-top: 2rem;
     }
 }
 
-.case-study-summary__link,
-.shot__image-link {
-    display: inline-block;
-    line-height: 0;
-    text-decoration: none;
+.landing-page-about__services,
+.landing-page-about__contact {
+    padding-top: 3rem;
 }
 
-.case-study-summary__link:hover {
-    .case-study-summary__image {
-        transform: scale(1.025);
-    }
-
-    .case-study-summary__text {
-        opacity: 0.75;
+.landing-page-about__contact {
+    @media screen and (min-width: 760px) {
+        padding-top: 4rem;
     }
 }
 
-.case-study-summary__image,
-.shot__image {
-    max-width: 100%;
-    height: auto;
-    line-height: 0;
-    box-shadow: 0 2px 24px rgba(0,0,0,0.1);
-    transition: transform 250ms ease;
+.landing-page-about__body,
+.landing-page-about__services-list-item {
+    opacity: 0.8;
 }
 
-.case-study-summary__text {
-    margin: 1rem 0;
-}
+.landing-page-about__services {
+    display: flex;
+    flex-flow: column;
 
-.case-study-summary__title,
-.case-study-summary__description {
-    display: inline;
-}
-
-.shots__link {
-    display: inline-block;
-    padding: 0.75rem 0;
-    color: $primary;
-    text-decoration: none;
-}
-
-.shots {
-    padding-top: 2rem;
-    padding-bottom: 3rem;
-
-    @media screen and (min-width: 1000px) {
-        padding: 6rem 0;
+    @media screen and (min-width: 540px) {
+        flex-flow: row;
     }
 }
 
-.shots__description {
+
+.landing-page-about__services-list-wrapper + .landing-page-about__services-list-wrapper {
+    @media screen and (min-width: 540px) {
+        padding-top: 0;
+        margin-left: 1.5rem;
+    }
+
+    @media screen and (min-width: 760px) {
+        margin-left: 4rem;
+    }
+}
+
+.landing-page-about__services-list,
+.landing-page-about__services-list-item + .landing-page-about__services-list-item {
     margin-top: 0.5rem;
 }
 
-.shots__grid {
-    display: flex;
-    flex-flow: row wrap;
+.landing-page-about__contact-title,
+.landing-page-about__social-title {
+    margin-bottom: 0.5rem;
 }
 
-.shot__image-link {
-    width: calc(50% - 0.5rem);
-    margin-top: 1rem;
+.social-icon-link {
+    display: inline-block;
 
-    &:nth-child(odd) {
-        margin-right: 0.5rem;
-    }
-
-    &:nth-child(even) {
+    + .social-icon-link {
         margin-left: 0.5rem;
     }
-
-    &:hover {
-        .shot__image {
-            transform: scale(1.025);
-        }
-    }
 }
 
-.shots__link {
-    margin-top: 1rem;
+.landing-page-about__copyright {
+    margin-top: 3rem;
 }

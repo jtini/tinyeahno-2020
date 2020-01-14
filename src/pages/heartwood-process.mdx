@@ -1,0 +1,223 @@
+import CaseStudyIntro from '../components/CaseStudyIntro/CaseStudyIntro'
+import CaseStudyConclusion from '../components/CaseStudyConclusion/CaseStudyConclusion'
+import heroImage from './heartwood/Heartwood-Hero.png'
+
+<CaseStudyIntro
+    title="Heartwood"
+    subtitle="A design system to propel Spruce Labs’s mission to define the future of brick and mortar retail."
+    image={{
+        src: heroImage,
+        alt: "Heartwood hero image"
+    }}
+    content={[
+        {
+            kind: 'text',
+            headline: 'The Client',
+            text: "Spruce Labs's mission is to help brick and mortar retailers thrive by enabling them to create great experiences. Founded in 2016, the team created Sprucebot (or Spruce for short) at Spruce Boutique in Denver. From day one, Spruce has found success by combining technology with a human-centered approach to experience management."
+        }, {
+            kind: 'text',
+            headline: 'My Role',
+            text: "As Spruce’s principal designer, I led the design team's strategy and execution. This included product and visual design, illustration, and frontend web development."
+        }, {
+            kind: 'text',
+            headline: 'The Challenge',
+            text: "For years, Spruce had evolved without any real design direction. We had created a small and simple library of components early on, but it hadn't changed in several years. As a result, component availability became the driver of experience design. This created an experience that felt wonky and awkward. On top of that, there was internal confusion on the team due to lack of a shared language around the product."
+        }, {
+            kind: 'quote',
+            quote: "“When you only have a hammer, everything looks like a nail.”",
+            attribution: "— Maslow's Hammer"
+        }, {
+            kind: 'text',
+            text: "My goal with Heartwood was to create a shared design language to help our team improve Spruce. I decided early on that this would be more than a component library. We needed a tool, or a set of tools, that would scale with the product."
+        }
+    ]}
+    aside={[
+        {
+            headline: 'What I did',
+            items: [
+                'Design Strategy',
+                'Digital Product Design',
+                'Visual Design',
+                'Frontend Development'
+            ]
+        }, {
+            headline: 'Deliverables',
+            items: [
+                'Design Tokens',
+                'Component Library',
+                'Fractal Components',
+                'React Storybook Components'
+            ]
+        }
+    ]}
+/>
+
+## Defining our Design Principles
+Before getting into visual styles or components, we defined our design principles. These would serve as stimulus for all future design decisions.
+
+![Heartwood design principles graphic](/heartwood/Heartwood-Design-Principles@2x.png "Heartwood’s core design principles.")
+
+Working with the rest of the team, we explored the company's core values as a jumping off point. The result of this exploration was four key principles:
+
+1. **Humanity:** Spruce exists to enhance human-to-human interaction.
+2. **Physicality:** We are creating the digital platform for physical retail.
+3. **Augmentation:** Technology is good at things that humans aren’t, and vice versa.
+4. **Flexibility:** Change is the only constant.
+
+## System Architecture
+The next step was to determine Heartwood's system architecture. The last thing we wanted was to create a pretty design system that never gets implemented. We worked with the engineering team to figure out how we could get Heartwood into place and keep it up to date.
+
+![An early sketch of the Heartwood system architecture](/heartwood/System-Architecture-Sketch@2x.png "An early sketch of Heartwood’s system architecture.")
+
+There were two key considerations at this phase. First, we wanted to enable designers to influence the product with minimal risk. Second, we wanted to avoid slowing down the engineering team's workflow.
+
+![Diagram showing the final Heartwood system architecture](/heartwood/Sys-Arch-02@2x.png "The final system architecture.")
+
+## Shared Styles
+Using the architecture as a map, the next step was to define shared visual styles. We divided our styles into six main categories: color, typography, spacing, iconography, layer, and motion.
+
+![A collection of text styles, colors, icons, and box shadows showing Heartwood's shared styles](/heartwood/Shared-Styles@2x.png "A sample of Heartwood’s shared styles.")
+
+We began by focusing on how we could apply the principle of Humanity to our color palette. Citing the [Curb Cut Effect](https://99percentinvisible.org/episode/curb-cuts/), we elected to make accessibility a focal point (WCAG AA to be exact). This led us to change our "primary" color group from a hard to read green to a much punchier blue.
+
+![Side by side comparison of old and new components](/heartwood/Color-Updates@2x.png "Primary color adjustments for better accessibility.")
+
+Next we focused on applying Physicality to our colors. In particular, we noticed that the use of pure grey felt too computer-y. Nothing in the physical world is 100% neutral grey. To make the product look more natural, we saturated our greyscale. The result is a greyscale that feels more like ink or stone.
+
+![Side by side comparison of old and new grey scales](/heartwood/Grey-Scale@2x.png "Original greyscale (left) compared to Heartwood greyscale (right).")
+
+We began our type exploration by searching for a super family with the right features. It was important to pick a family that included a sans and a monospaced typeface. Having both would ensure a high level of flexibility while maintaining cohesiveness. We’d consider a matching serif face a bonus, but not necessary.
+
+![Text samples of families that we considered](/heartwood/Type-Families@2x.png "Some of the typeface families we explored.")
+
+We ended up choosing the Source family. These faces had the widest language support and largest set of OpenType features of anything we looked at. Even some of the paid options we considered had fewer features.
+
+![Samples of Source Sans Pro, Source Serif Pro, and Source Code Pro](/heartwood/Source-Family@2x.png "The Source family.")
+
+I developed an extensive type scale based on a formula that creates integer font sizes, which are as easy to work with in code as they are in design. Using a formula enabled us to generate far more sizes than we would need for the time being. As new challenges emerge the formula provides a starting point to add new sizes. We narrowed down the initial set to a few styles for immediate use.
+
+![The Heartwood type scale and some of Heartwood's pre-rolled type styles](/heartwood/Type-Scale-and-Styles@2x.png "A segment of Heartwood’s base type scale and a handful of pre-rolled styles.")
+
+## Components
+The component design phase began with the humble goal of parity. It was important to make sure we didn't forget to update any existing components. This would let us phase Heartwood into production without breaking anything. To ease the transition, we did a thorough audit of the existing codebase. From this audit, we redesigned each component to use our new shared styles.
+
+![Component updates including buttons, button groups, messages, and list items](/heartwood/Components-Round-1@2x.png "Old components (left) redesigned with new styles (right).")
+
+The previous round of component design was lacking in detail. This caused a problem for the design team. To see a component in detail, one would have to look at production, which was often unstable. This situation meant the design team was often blocked from making progress. To solve this problem, we added in-depth details to our design documentation.
+
+![An example of some of the more in-depth documentation we began to create](/heartwood/Button-Documentation@2x.png "An example of more in-depth component documentation")
+
+Next we focused on new components that would improve the product experience. We found low hanging fruit in cases like the nonexistence of a checkbox component. In other cases, the solutions we were after required more discovery.
+
+![Some new components including a date picker, modals, toasts, new form inputs, and lists](/heartwood/New-Components@2x.png "A sampling of new Heartwood components.")
+
+One of the biggest pain points we kept hearing from users was that they had to jump around a lot to do their jobs. This felt unnatural, awkward, and frustrating — the antithesis of what Spruce should be. Even if a user knew where everything was, there was a lot of opportunity for improvement. We asked ourselves what role Heartwood components could play in solving this problem.
+
+To figure out which components we needed, we did some competitive analysis. The all-around best solution we found was the concept of a card-based interface. This would solve a couple of big problems. First, we could serve up custom tailored content to specific users. Second, we could use cards to shift the product from task-oriented to people-oriented. This people-centric approach felt more in line with Heartwood's design principles.
+
+![A sketch from our team's brainstorming on what to do with cards](/heartwood/Cards-Sketch@2x.png "Results of our team’s brainstorming about cards.")
+
+We spent a week or so brainstorming about cards. We focused on what we could use them for, where they would live, and what types of content they'd need to support.
+
+![Seven variations we came up with for cards](/heartwood/Cards@2x.png "Examples of cards that tie to specific use cases.")
+
+We landed on a few variations that each tied to at least one use case. These variations informed the design of the card components.
+
+![Documentation showing how we broke down the card component](/heartwood/Card-Anatomy@2x.png "The anatomy of the final card component.")
+
+We opted to move into code before our component designs were 100% complete. The idea behind this was to kick the tires on our system architecture before getting too far. We also found that for certain components, it was faster to make changes in code.
+
+![Screenshots of the tools our team used to get components into code](/heartwood/Fractal-and-Storybook@2x.png "Screenshots of Heartwood components in Fractal (above) and Storybook (below).")
+
+> Spruce is an experience engine. We couldn’t call Heartwood camera-ready without using it to design some experiences.
+
+## Onboarding
+To begin, we redesigned the global onboarding experience. We identified a couple of core problems with the current flow:
+- It wasn't easy for a new user to add or confirm their personal info.
+- The onboarding experience lacked personality and failed to build rapport with new users.
+- We duplicated effort by having different onboarding experiences on web and iOS.
+
+![Some examples of the existing card as an onboarding card](/heartwood/Onboarding-Card@2x.png "The previously designed onboarding card.")
+
+The new card component was a perfect candidate for the task at hand. We had already considered an onboarding card as one of its use cases. The advantage of having some of the simple design decisions already made was that we were able to focus on the trickier parts of the problem.
+
+![Variations we created on the onboarding card](/heartwood/Card-Variations@2x.png "Variations on the onboarding card based on if/how the user was invited.")
+
+For example, we can't be 100% sure what information we already have when someone signs up. If a new user signs up from an invite, the person who invited them may have already added their name or photo. On the other hand, a phone number is the only requirement for an invitation, and a user could be signing up on their own.
+
+![Illustrations we created for the onboarding flow](/heartwood/Card-Illustrations@2x.png "Some illustrations we created to give the experience more personality.")
+
+Starting with the card component also freed up some time to focus on illustrations. These helped lend the experience some personality.
+
+## Booking
+A good appointment booking experience is mission critical for service-based businesses. Spruce's old booking flow worked well for customers, but not for employees. It turned out that one size did not fit all after all. To remedy this, we created a booking flow tailored to employees.
+
+![A view of the Heartwood calendar](/heartwood/Calendar@2x.png "The new calendar view turned out to be indispensable for employees.")
+
+The main consideration for employee booking was to start with a calendar view. On large enough screens, we opted to keep the calendar visible. Desk staff and receptionists tend to use large screens and like to see the whole team's schedule. This view makes it easy for an employee to find an available time and provider.
+
+![Examples of how the booking flow is delivered via the sidebar](/heartwood/Booking-TX-Sidebar@2x.png "The calendar sidebar contains the whole booking flow on mobile.")
+
+We found that service providers tend to book their own appointments on their phones. This presented a challenge. We had to make sure that no interaction relied entirely on the calendar being visible. To solve this, we introduced some new components. Some of these turned out to solve problems outside of booking.
+
+![Side by side comparison of changes to customer booking](/heartwood/Guest-Booking-Before-and-After@2x.png "The old customer booking (left) and the new experience (right).")
+
+Customer booking stayed as it was for the most part. The key change was how a user selects a service to book. The previous iteration had two separate steps for service and provider selection. The new flow makes provider selection a subtask within service selection. This turned out to be more intuitive to customers, and was a performance gain for the app.
+
+![Flow showing lazy registration in customer booking](/heartwood/Guest-Booking-Lazy-Registration@2x.png "We moved signup/login to the end of the booking process for customers.")
+
+The other crucial change to customer booking was to make personal info the last step. This “lazy” booking makes it possible for potential customers to browse without committing. Our theory was that it would also result in a higher rate of successful bookings.
+
+## Visual Identity
+Heartwood began with a focus on the core Spruce product. As we moved forward, there was some divergence between product and brand design. We decided to use Heartwood's core principles to refresh the Spruce visual identity. Our goal was to make the end-to-end experience more cohesive.
+
+![An illustration with the words “The Future of Brick and Mortar” and the new Spruce logo](/heartwood/Brand-Expression@2x.png "A brand expression piece created during visual explorations.")
+
+![Side by side comparison showing how the logo changed](/heartwood/Logo-Changes@2x.png "Changes to the logo.")
+
+The old logo always felt a bit off, for reasons the team found hard to vocalize. Looking at it through the lens of Heartwood's Humanity principle made it clear. The logo was frowning. The solution was to make it smile.
+
+![A color exploration showing the Spruce logo in different colors](/heartwood/Color-Exploration@2x.png "Color explorations based on contrast of temperature and saturation.")
+
+Our new color palette was a bit spare when it came to expressiveness. We devised an approach that would focus on how we create contrast, rather than on specific colors. This enabled our creative team to try lots of ideas and push the envelope. At the same time, we had enough parameters to avoid visual chaos.
+
+![Custom lettering of the words beautiful, fast, intuitive, and scalable](/heartwood/Words@2x.png "Custom lettering of the Engineering team's values.")
+
+![Samples of avatar explorations.](/heartwood/Avatars-Sample@2x.png )
+
+Our default avatars presented an opportunity to bridge the brand and product experience. We had been using one default for every new user, which was easy to put in place, but caused some problems. Using one default for everyone made it hard to differentiate between new users. To solve this problem, we decided to create a set of placeholder avatars. We gave ourselves some parameters to work within:
+- Avatars have to work on light and dark backgrounds
+- Avatars should be inclusive and make users feel welcome
+- There shouldn't be a reason that someone would want to pick a specific avatar
+
+![First round of avatar exploration.](/heartwood/Avatars-01@2x.png )
+
+The first round of exploration used rough line work and some textured backgrounds. This approach created a decent set of avatars, but felt a bit risky. The line work approach seemed like it could become gendered as the set grows.
+
+![Second round of avatar exploration.](/heartwood/Avatars-02@2x.png )
+
+The next round went more abstract and punched up the background textures. The big grins on these felt a bit cheesy and the set was too homogenous.
+
+![Third and final round of avatar exploration.](/heartwood/Avatars-03@2x.png )
+
+The third round used a more photographic approach. We toned down the smiles on these and found that we could generate new ones quickly as an added bonus.
+
+![New avatars in context.](/heartwood/Avatars-in-Context@2x.png )
+
+We auditioned this round in the interface and decided to go with it. This approach checked all the right boxes and we felt confident that we could add to it in the future.
+
+## The Future of Heartwood
+I left the team at Spruce Labs with some free ideas of how to grow and evolve Heartwood in the future.
+
+![Example of night mode that can inform theming strategy.](/heartwood/Night-Mode@2x.png )
+
+The biggest remaining gap was theming. While we had laid the groundwork for it, there wasn’t any real documentation or strategy. We decided to create “day” and “night” modes to kick the tires on one potential approach. The main lift was to define semantic colors, which we could swap out to switch between modes.
+
+![Heartwood Tokens are available online.](/heartwood/Heartwood-Tokens@2x.png )
+
+Explorations in theming also led to the development of Heartwood Tokens. We broke these out into a separate project and I created a static website to share with the team. Giving tokens their own home has the added benefit of making Heartwood more scalable. This opened the door to Heartwood evolving into a more robust set of tools with a cohesive foundation.
+
+<CaseStudyConclusion
+    headline="Results"
+    text="Heartwood has already gone a long way to make Spruce useful, usable, and beautiful. By providing a shared language, it has equipped the team at Spruce Labs to continue evolving their core product. Heartwood will continue to play a role in defining the future of brick and mortar retail."
+/>

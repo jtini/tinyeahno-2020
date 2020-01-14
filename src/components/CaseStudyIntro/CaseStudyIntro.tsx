@@ -36,6 +36,27 @@ const QuoteBlock = (props: QuoteBlockProps) => {
     )
 }
 
+interface ListBlockProps {
+    headline?: string,
+    items?: string[]
+}
+
+const ListBlock = (props: ListBlockProps) => {
+    const { headline, items } = props;
+    return (
+        <>
+            {headline && <h3 className="case-study-intro__aside-list-header body bold">{headline}</h3>}
+            {items && items.length > 0 &&
+                <ul className="case-study-intro__aside-list">
+                    {items.map(item => (
+                        <li key={item} className="case-study-intro__aside-list-item small-body mono">{item}</li>
+                    ))}
+                </ul>
+            }
+        </>
+    )
+}
+
 type HeroImage = {
     src: string,
     alt: string
@@ -53,16 +74,18 @@ interface CaseStudyIntroProps {
     title: string,
     subtitle?: string,
     image?: HeroImage,
-    content?: ContentPiece[]
+    content?: ContentPiece[],
+    aside?: ListBlockProps[]
 }
 
 const blocks = {
     text: TextBlock,
-    quote: QuoteBlock
+    quote: QuoteBlock,
+    list: ListBlock
 }
 
 const CaseStudyIntro = (props: CaseStudyIntroProps) => {
-    const { title, subtitle, image, content } = props;
+    const { title, subtitle, image, content, aside } = props;
     return (
         <>
             <section className="case-study-intro">
@@ -76,19 +99,33 @@ const CaseStudyIntro = (props: CaseStudyIntroProps) => {
                     <div className="case-study-intro__container">
                         <h1 className="case-study-intro__title subtitle display">{title}</h1>
                         <p className="case-study-intro__subtitle">{subtitle}</p>
-                        {content && content.length > 0 && content.map((entry, idx) => {
-                            const Element = blocks[entry.kind]
 
-                            if (!blocks[entry.kind]) {
-                                return null
+
+                        <div className="case-study-intro__text-container">
+                            <div className="case-study-intro__text">
+                                {content && content.length > 0 && content.map((entry, idx) => {
+                                    const Element = blocks[entry.kind]
+
+                                    if (!blocks[entry.kind]) {
+                                        return null
+                                    }
+
+                                    return (
+                                        <Fragment key={idx}>
+                                            <Element {...entry} />
+                                        </Fragment>
+                                    )
+                                })}
+                            </div>
+
+                            {aside && aside.length > 0 &&
+                                <aside className="case-study-intro__aside">
+                                    {aside.map(item => (
+                                        <ListBlock {...item} />
+                                    ))}
+                                </aside>
                             }
-
-                            return (
-                                <Fragment key={idx}>
-                                    <Element {...entry} />
-                                </Fragment>
-                            )
-                        })}
+                        </div>
                     </div>
                 </div>
                 <Link to="/" className="case-study-intro__home-link">
