@@ -101,9 +101,21 @@
     padding-top: 1.5rem;
 }
 
+.landing-page-about__social {
+    @media screen and (min-width: 760px) {
+        padding-top: 2rem;
+    }
+}
+
 .landing-page-about__services,
 .landing-page-about__contact {
     padding-top: 3rem;
+}
+
+.landing-page-about__contact {
+    @media screen and (min-width: 760px) {
+        padding-top: 4rem;
+    }
 }
 
 .landing-page-about__body,
