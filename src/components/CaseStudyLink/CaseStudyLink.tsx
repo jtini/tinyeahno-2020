@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 
 import './CaseStudyLink.scss'
 
-interface CaseStudyLinkProps {
+export interface CaseStudyLinkProps {
     slug: string,
     title: string,
     description: string,
