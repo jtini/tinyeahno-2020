@@ -1,0 +1,38 @@
+import CaseStudyIntro from '../components/CaseStudyIntro/CaseStudyIntro'
+import CaseStudyConclusion from '../components/CaseStudyConclusion/CaseStudyConclusion'
+import heroImage from './heartwood/Heartwood-Hero.png'
+
+
+
+<CaseStudyIntro
+    title="Heartwood"
+    subtitle="A design system to propel Spruce Labs’s mission to define the future of brick and mortar retail."
+    image={{
+        src: heroImage,
+        alt: "Heartwood hero image"
+    }}
+    content={[
+        {
+            kind: 'text',
+            headline: 'The Brief',
+            text: "Spruce Labs's mission is to help brick and mortar retailers thrive by enabling them to create great experiences. From day one, Spruce has found success by combining technology with a human-centered approach to experience management."
+        }, {
+            kind: 'text',
+            text: "Spruce evolved for years without any real design direction. We created a small library of components early on, but it hadn't changed since. As a result, component availability became the driver of experience design. This created an experience that felt wonky and awkward."
+        }, {
+            kind: 'text',
+            text: "My goal with Heartwood was to create a shared design language to help our team improve Spruce. I decided early on that this would be more than a component library. We needed a tool, or a set of tools, that would scale with the product."
+        }
+    ]}
+    aside={[
+        {
+            headline: 'My Role',
+            items: [
+                'Design Strategy',
+                'Digital Product Design',
+                'Visual Design',
+                'Frontend Development'
+            ]
+        }
+    ]}
+/>
