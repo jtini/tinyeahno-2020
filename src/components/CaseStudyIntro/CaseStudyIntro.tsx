@@ -74,7 +74,7 @@ const CaseStudyIntro = (props: CaseStudyIntroProps) => {
                 />
                 <div className="case-study-intro__inner wrapper">
                     <div className="case-study-intro__container">
-                        <h1 className="case-study-intro__title title display">{title}</h1>
+                        <h1 className="case-study-intro__title subtitle display">{title}</h1>
                         <p className="case-study-intro__subtitle">{subtitle}</p>
                         {content && content.length > 0 && content.map((entry, idx) => {
                             const Element = blocks[entry.kind]
