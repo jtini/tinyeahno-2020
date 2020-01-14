@@ -66,63 +66,17 @@ const caseStudies = {
   }
 }
 
-const shots = {
-  make: {
-    image: {
-      src: 'https://cdn.dribbble.com/users/2873040/screenshots/7006569/media/88e7e2f21b6434bc47595c5518d01732.png',
-      width: 400,
-      height: 300
-    },
-    href: 'https://dribbble.com/shots/7006569-Make'
-  },
-  tenOuttaTen: {
-    image: {
-      src: 'https://cdn.dribbble.com/users/2873040/screenshots/7998035/media/48e6182ecb25d09e45ff0b2a2b3b0115.png',
-      width: 400,
-      height: 300
-    },
-    href: 'https://dribbble.com/shots/7998035-Ten-Outta-Ten-Sketch'
-  },
-  stayFresh: {
-    image: {
-      src: 'https://cdn.dribbble.com/users/2873040/screenshots/7887013/media/a53afd7807363bbd15c5a79b45301180.png',
-      width: 400,
-      height: 300
-    },
-    href: 'https://dribbble.com/shots/7887013-Stay-Fresh'
-  },
-  scalableShadow: {
-    image: {
-      src: 'https://cdn.dribbble.com/users/2873040/screenshots/8195274/media/a017a5276d2ed46e1235a0e1a8317ec4.png',
-      width: 400,
-      height: 300
-    },
-    href: 'https://dribbble.com/shots/8195274-Scalable-Shadow'
-  }
-}
-
 const IndexPage = () => (
   <Layout className="landing-page">
-    <SEO title="Home" />
+    <SEO title="Tin Yeah No" />
     <section className="landing-page__hero">
-      <h1 className="title display">Tin Yeah No</h1>
-      <p className="large-body">Jeremy Tinianow is a designer who believes in making things better than they need to be.</p>
-      <p className="body">If you’re interested in working together, or just wanna say hi, reach out at <a href="mailto:jeremy@tinyeahno.com" className="c-text-on-yellow">jeremy@tinyeahno.com</a>.</p>
-      <div className="social-links">
-        {Object.keys(socials).map(key => {
-          return (
-            <a
-              className="social-icon-link"
-              href={socials[key].link}
-              target="_blank"
-              key={key}
-            >
-              <img src={socials[key].icon} className="social-icon" />
-            </a>
-          )
-        })}
+      <div className="landing-page__hero-inner">
+        <div className="landing-page__hero-info">
+          <p className="body bold">Tin Yeah No</p>
+          <a className="landing-page__hero-mailto body" href="mailto:jeremy@tinyeahno.com">jeremy@tinyeahno.com</a>
+        </div>
+        <h1 className="landing-page__hero-main title display">Hi, I’m Jeremy. I’m a designer who believes in making things better than they need to be.</h1>
       </div>
-      <p className="body">© Jeremy Tinianow 2020</p>
     </section>
     <section className="landing-page__content">
       <h2 className="headline bold">Case Studies</h2>
@@ -148,36 +102,6 @@ const IndexPage = () => (
         )
       })}
 
-      <div className="shots">
-        <h2 className="shots__title headline bold">Odds & Ends</h2>
-        <p className="shots__description large-body c-text-on-light-subdued">Illustrations, lettering, icons, and other visual work.</p>
-
-        <div className="shots__grid">
-
-          {Object.keys(shots).map(key => {
-            const shot = shots[key];
-
-            return (
-              <a
-                key={key}
-                href={shot.href}
-                target="_blank"
-                className="shot__image-link"
-              >
-                <img
-                  src={shot.image.src}
-                  width={shot.image.width}
-                  height={shot.image.height}
-                  className="shot__image"
-                />
-              </a>
-            )
-          })}
-
-        </div>
-        <a href="https://dribbble.com/jtini" target="_blank" className="shots__link body">More on Dribbble</a>
-
-      </div>
     </section>
   </Layout>
 )
