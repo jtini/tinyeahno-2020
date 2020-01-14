@@ -2,8 +2,6 @@ import CaseStudyIntro from '../components/CaseStudyIntro/CaseStudyIntro'
 import CaseStudyConclusion from '../components/CaseStudyConclusion/CaseStudyConclusion'
 import heroImage from './heartwood/Heartwood-Hero.png'
 
-
-
 <CaseStudyIntro
     title="Heartwood"
     subtitle="A design system to propel Spruce Labs’s mission to define the future of brick and mortar retail."
@@ -35,4 +33,59 @@ import heroImage from './heartwood/Heartwood-Hero.png'
             ]
         }
     ]}
+/>
+
+![Heartwood’s core design principles are Humanity, Physicality, Augmentation, and Flexibility](/heartwood/Design-Principles@2x.png "Heartwood’s core design principles.")
+
+## Defining our Design Principles
+Before getting into visual styles or components, we defined our design principles. These would serve as stimulus for all future design decisions.
+
+![Heartwood’s core design principles feed into shared styles, which are used to design components that feed into features and production.](/heartwood/System-Architecture@2x.png "The Heartwood system architecture.")
+
+## System Architecture
+The next step was to determine Heartwood's system architecture. The last thing we wanted was to create a pretty design system that never gets implemented. We worked with the engineering team to figure out how we could get Heartwood into place and keep it up to date.
+
+![Shared styles include text, color, layer, icon, spacing, and motion.](/heartwood/Shared-Styles-Alt@2x.png "A sample of Heartwood’s shared styles.")
+
+## Shared Styles
+Using the architecture as a map, the next step was to define shared visual styles. We divided our styles into six main categories: color, typography, spacing, iconography, layer, and motion.
+
+![A collage of Heartwood components including calendars, inputs, lists, and modals.](/heartwood/Components@2x.png "A sampling of new Heartwood components.")
+
+## Components
+The component design phase began with the humble goal of parity. It was important to make sure we didn't forget to update any existing components. This would let us phase Heartwood into production without breaking anything. To ease the transition, we did a thorough audit of the existing codebase. From this audit, we redesigned each component to use our new shared styles.
+
+![Primary and secondary buttons shown as documented.](/heartwood/Component-Example@2x.png "An example of more in-depth component documentation")
+
+The previous round of component design was lacking in detail. This caused a problem for the design team. To see a component in detail, one would have to look at production, which was often unstable. This situation meant the design team was often blocked from making progress. To solve this problem, we added in-depth details to our design documentation.
+
+![Seven variations of the Heartwood card component.](/heartwood/Cards-Alt@2x.png "Examples of cards that tie to specific use cases.")
+
+## Cards for Humanity
+We spent a week or so brainstorming about cards. We focused on what we could use them for, where they would live, and what types of content they'd need to support. Our goal was to invest in a component that would make the platform more flexible.
+
+![The onboarding card shown in a phone.](/heartwood/Onboarding-Card-Alt@2x.png "Some illustrations we created to give the experience more personality.")
+
+## Onboarding
+The new card component was a perfect candidate for improving our onboarding experience. We had already considered an onboarding card as one of its use cases. The advantage of having some of the simple design decisions already made was that we were able to focus on the trickier parts of the problem.
+
+![The Heartwood calendar.](/heartwood/Calendar-Alt@2x.png "The new calendar view turned out to be indispensable for teammates.")
+
+## Teammate Booking
+The main consideration for teammate booking was to start with a calendar view. On large enough screens, we opted to keep the calendar visible. Desk staff and receptionists tend to use large screens and like to see the whole team's schedule. This view makes it easy for an employee to find an available time and provider.
+
+![An example of how night mode could look.](/heartwood/Night-Mode-Alt@2x.png "Example of night mode that can inform theming strategy.")
+
+## Day/Night Mode
+We decided to create “day” and “night” modes to kick the tires on a potential approach to white label theming. The main lift was to define semantic colors, which we could swap out to switch between modes.
+
+![The Heartwood Tokens site.](/heartwood/Heartwood-Tokens-Alt@2x.png "Heartwood Tokens are available online.")
+
+## Heartwood Tokens
+Explorations in theming led to the development of Heartwood Tokens. We broke these out into a separate project and I created a static website to share with the team. Giving tokens their own home has the added benefit of making Heartwood more scalable. This opened the door to Heartwood evolving into a more robust set of tools with a cohesive foundation.
+
+
+<CaseStudyConclusion
+    headline="Results"
+    text="Heartwood has already gone a long way to make Spruce useful, usable, and beautiful. By providing a shared language, it has equipped the team at Spruce Labs to continue evolving their core product. Heartwood will continue to play a role in defining the future of brick and mortar retail."
 />
