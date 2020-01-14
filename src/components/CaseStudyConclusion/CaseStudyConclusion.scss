@@ -1,0 +1,47 @@
+@import "../../styles/base";
+
+.case-study-conclusion {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-color: $bg;
+
+    @media screen and (min-width: 760px) {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
+}
+
+.case-study-conclusion__inner {
+    max-width: 47.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.case-study-conclusion__headline {
+    @extend %body;
+    @extend %bold;
+}
+
+.case-study-conclusion__text {
+    @extend %body;
+    margin-top: 0.5rem;
+
+    @media screen and (min-width: 760px) {
+        margin-top: 1rem;
+    }
+}
+
+.case-study-conclusion__quote {
+    margin-top: 3rem;
+}
+
+.case-study-conclusion__quote-quote {
+    @extend %subheadline;
+    @extend %display;
+}
+
+.case-study-conclusion__quote-attribution {
+    @extend %small-body;
+    margin-top: 0.5rem;
+    color: $text-on-light-subdued;
+}

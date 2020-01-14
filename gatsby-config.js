@@ -13,6 +13,13 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `page-images`,
+        path: `${__dirname}/src/pages`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -34,6 +41,28 @@ module.exports = {
       options: {
         typekit: {
           id: 'snu1mhw'
+        }
+      }
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              quality: 90,
+              maxWidth: 1200,
+              linkImagesToOriginal: false,
+              sizeByPixelDensity: false,
+              showCaptions: true,
+              markdownCaptions: true,
+              withWebp: true
+            }
+          }
+        ],
+        defaultLayouts: {
+          default: require.resolve("./src/components/CaseStudyLayout/CaseStudyLayout.tsx")
         }
       }
     }

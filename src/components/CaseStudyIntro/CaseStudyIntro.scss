@@ -1,0 +1,75 @@
+@import "../../styles/base";
+
+.case-study-intro {
+    position: relative;
+}
+
+.case-study-intro__inner {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: $bg;
+
+    p + h3,
+    p + blockquote,
+    blockquote + p {
+        margin-top: 1.5rem;
+    }
+
+    h3 + p {
+        margin-top: 0.25rem;
+    }
+
+    @media screen and (min-width: 760px) {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+
+        p + h3,
+        p + blockquote,
+        blockquote + p {
+            margin-top: 3rem;
+        }
+
+        h3 + p {
+            margin-top: 0.5rem;
+        }
+    }
+}
+
+.case-study-intro__container {
+    max-width: 47.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.case-study-intro__hero-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    line-height: 0;
+}
+
+.case-study-intro__subtitle {
+    margin-top: 0.25rem;
+    font-size: ms(0);
+
+    @media screen and (min-width: 760px) {
+        font-size: ms(1, $thread: desktop);
+    }
+}
+
+.attribution { margin-top: 0.5rem; }
+
+.case-study-intro__home-link {
+    @extend %body;
+    display: inline-flex;
+    align-items: center;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.case-study-intro__home-text {
+    margin-left: 0.5rem;
+}
