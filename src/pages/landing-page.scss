@@ -118,3 +118,83 @@
 .case-study-summary__tags {
     margin-top: 0.5rem;
 }
+
+.landing-page-about {
+    padding: 1rem;
+    background-color: $text-on-light;
+    color: $bg;
+
+    @media screen and (min-width: 500px) {
+        padding: 1.5rem;
+    }
+
+    @media screen and (min-width: 760px) {
+        padding-top: 4rem;
+    }
+}
+
+.landing-page-about__inner {
+    max-width: 46rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.landing-page-about__subtitle,
+.landing-page-about__body,
+.landing-page-about__services-list-wrapper + .landing-page-about__services-list-wrapper,
+.landing-page-about__social {
+    padding-top: 1.5rem;
+}
+
+.landing-page-about__services,
+.landing-page-about__contact {
+    padding-top: 3rem;
+}
+
+.landing-page-about__body,
+.landing-page-about__services-list-item {
+    opacity: 0.8;
+}
+
+.landing-page-about__services {
+    display: flex;
+    flex-flow: column;
+
+    @media screen and (min-width: 540px) {
+        flex-flow: row;
+    }
+}
+
+
+.landing-page-about__services-list-wrapper + .landing-page-about__services-list-wrapper {
+    @media screen and (min-width: 540px) {
+        padding-top: 0;
+        margin-left: 1.5rem;
+    }
+
+    @media screen and (min-width: 760px) {
+        margin-left: 4rem;
+    }
+}
+
+.landing-page-about__services-list,
+.landing-page-about__services-list-item + .landing-page-about__services-list-item {
+    margin-top: 0.5rem;
+}
+
+.landing-page-about__contact-title,
+.landing-page-about__social-title {
+    margin-bottom: 0.5rem;
+}
+
+.social-icon-link {
+    display: inline-block;
+
+    + .social-icon-link {
+        margin-left: 0.5rem;
+    }
+}
+
+.landing-page-about__copyright {
+    margin-top: 3rem;
+}
