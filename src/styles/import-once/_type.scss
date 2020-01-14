@@ -43,3 +43,7 @@ p {
     @extend %display;
     @extend %book;
 };
+
+.mono {
+    @extend %mono;
+};
