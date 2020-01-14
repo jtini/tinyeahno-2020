@@ -1,7 +1,7 @@
 @import "../../styles/base";
 
 .case-study {
-    > * + * {
+    > * + *:not(.next-case-study) {
         margin-top: 4rem;
     }
 
@@ -27,7 +27,7 @@
     }
 
     @media screen and (min-width: 760px) {
-        > * + * {
+        > * + *:not(.next-case-study) {
             margin-top: 8rem;
         }
 
