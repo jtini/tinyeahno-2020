@@ -132,6 +132,10 @@
     }
 }
 
+.landing-page-about__services-list-item {
+    @extend %body;
+}
+
 
 .landing-page-about__services-list-wrapper + .landing-page-about__services-list-wrapper {
     @media screen and (min-width: 540px) {

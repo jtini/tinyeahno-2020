@@ -56,6 +56,10 @@ p {
 
 .mono {
     @extend %mono;
-};
+}
+
+.label {
+    @extend %label;
+}
 
 .ta-center { text-align: center; }

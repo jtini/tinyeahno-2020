@@ -1,4 +1,4 @@
-$ff-base: work-sans, Helvetica, Arial, sans-serif;
+$ff-base: franklin-gothic-urw, Helvetica Neue, Arial, sans-serif;
 $ff-display: moret, Georgia, serif;
 $ff-mono: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
 
@@ -11,7 +11,7 @@ $ff-mono: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
 }
 
 %bold {
-    font-weight: 600;
+    font-weight: 500;
 }
 
 %display {
@@ -20,4 +20,9 @@ $ff-mono: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
 
 %mono {
     font-family: $ff-mono;
+}
+
+%label {
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
