@@ -1,0 +1,86 @@
+import CaseStudyIntro from '../components/CaseStudyIntro/CaseStudyIntro'
+import CaseStudyConclusion from '../components/CaseStudyConclusion/CaseStudyConclusion'
+import NextCaseStudy from '../components/NextCaseStudy/NextCaseStudy'
+import Wrapper from '../components/Wrapper/Wrapper'
+import Container from '../components/Container/Container'
+import heroImage from '../images/Spruce-Labs-Hero@2x.png'
+import logoLoop from './spruce-labs/Logo-Loop.gif'
+
+
+<CaseStudyIntro
+    title="Spruce Labs"
+    subtitle="Visual identity refresh for an up and coming technology startup."
+    image={{
+        src: heroImage,
+        alt: "Heartwood hero image"
+    }}
+    content={[
+        {
+            kind: 'text',
+            headline: 'The Brief',
+            text: "Founded in 2016, Spruce Labs began with the creation of Spruce: an experience management platform for brick and mortar retail. I joined the team in 2018 and after creating the Heartwood design system I shifted focus to the company’s visual identity."
+        }, {
+            kind: 'text',
+            text: "As the product evolved, the previous identity fell out of sync with the company’s design principles. The goal of this identity refresh was to bring the two back into alignment."
+        }
+    ]}
+    aside={[
+        {
+            headline: 'My Role',
+            items: [
+                'Design Strategy',
+                'Visual Design',
+                'Illustration'
+            ]
+        }
+    ]}
+/>
+
+<Wrapper>
+    <Container className="ta-center">
+        <img src={logoLoop} className="img-scale" width={400} height={300}/>
+    </Container>
+</Wrapper>
+
+![Comparison of the old and new logos](/spruce-labs/Logo-Before-After@2x.png "Making the Spruce logo smile.")
+
+## A Smiling Logo
+The old logo always felt a bit off, for reasons the team found hard to vocalize. Looking at it through the lens of Heartwood's Humanity principle made it clear. The logo was frowning. The solution was to make it smile.
+
+![Logos and lockups for Spruce and Spruce Labs](/spruce-labs/Lockups-Subbrands@2x.png "Spruce lockups (left) with Spruce Labs as an example of a sub-brand (right).")
+
+![Logos and lockups in day mode and night mode](/spruce-labs/Day-Night@2x.png "Day and night contexts to match the core product.")
+
+## A More Expansive Color Palette
+The old color palette was a bit spare when it came to expressiveness. We devised an approach that would focus on how we create contrast, rather than on specific colors. This enabled our creative team to try lots of ideas and push the envelope. At the same time, we had enough parameters to avoid visual chaos.
+
+![Early color explorations](/spruce-labs/Color-01@2x.png)
+
+![More refined color options based on temperature and value contrast.](/spruce-labs/Color-02@2x.png)
+
+## Bridging the Gap
+Illustrations bridge the gap between visual identity and product. We focused on interjecting playful illustrations at moments when a user experiences success
+
+![A screenshot of one of our new brand illustrations in the browser.](/spruce-labs/App@2x.png "Illustration sample in the core app.")
+
+## Four Words
+I worked with the Engineering team to create a set of lettering pieces to reflect their values. They had chosen four words and chose one to focus on every week.
+
+![Custom lettering of the words Beautiful, Fast, Scalable, and Intuitive](/spruce-labs/Words@2x.png "Custom lettering for the Engineering team.")
+
+<CaseStudyConclusion
+    headline="Results"
+    text="The refreshed identity has expanded Spruce Labs’s ability to scale as the company grows. As new challenges come into focus, the team will be prepared to meet them."
+/>
+
+<NextCaseStudy
+    slug="spruce-labs"
+    image={{
+        src: heroImage,
+        width: 736,
+        height: 460
+    }}
+    title="Spruce Labs"
+    description="Visual identity for the future of brick and mortar"
+    tags='Visual Design, Design Strategy'
+/>
