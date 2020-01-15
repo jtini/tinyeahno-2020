@@ -1,8 +1,27 @@
+---
+title: Heartwood
+description: A design system to propel Spruce Labs’s mission to define the future of brick and mortar retail.
+---
+import Helmet from 'react-helmet'
 import CaseStudyIntro from '../components/CaseStudyIntro/CaseStudyIntro'
 import CaseStudyConclusion from '../components/CaseStudyConclusion/CaseStudyConclusion'
 import NextCaseStudy from '../components/NextCaseStudy/NextCaseStudy'
 import heroImage from './heartwood/Heartwood-Hero.png'
+import shareImage from '../images/Heartwood-Thumb@2x.png'
 import spruceLabsHero from '../images/Spruce-Labs-Hero@2x.png'
+
+<Helmet
+    meta={[
+        {
+            property: 'og:image',
+            content: shareImage
+        },
+        {
+            name: 'twitter:image',
+            content: shareImage
+        }
+    ]}
+/>
 
 <CaseStudyIntro
     title="Heartwood"

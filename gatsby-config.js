@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter TS Scss`,
-    description: `Do Sass! Make the Typescripts!`,
-    author: `@jtini`,
+    title: `Jeremy Tinianow`,
+    description: `Hi, I’m Jeremy. I’m a designer who believes in making things better than they need to be.`,
+    author: `@jtinianow`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

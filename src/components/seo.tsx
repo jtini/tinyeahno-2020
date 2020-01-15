@@ -9,8 +9,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import shareImage from '../images/Share-Image.png'
 
-function SEO({ description, lang, meta, title }: {description: string, lang: string, meta: [], title: string}) {
+function SEO({ description, lang, meta, title }: { description: string, lang: string, meta: [], title: string }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -26,6 +27,7 @@ function SEO({ description, lang, meta, title }: {description: string, lang: str
   )
 
   const metaDescription = description || site.siteMetadata.description
+  console.log({ meta })
 
   return (
     <Helmet
@@ -52,8 +54,20 @@ function SEO({ description, lang, meta, title }: {description: string, lang: str
           content: `website`,
         },
         {
+          property: `og:image`,
+          content: shareImage,
+        },
+        {
+          property: `og:image:width`,
+          content: 1200,
+        },
+        {
+          property: `og:image:height`,
+          content: 630,
+        },
+        {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_card_large`,
         },
         {
           name: `twitter:creator`,
@@ -67,8 +81,21 @@ function SEO({ description, lang, meta, title }: {description: string, lang: str
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          name: `twitter:image`,
+          content: shareImage,
+        },
       ].concat(meta)}
-    />
+    >
+      <link rel="canonical" href="https://tinyeahno.com" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="manifest" href="/site.webmanifest" />
+      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#b2726b" />
+      <meta name="msapplication-TileColor" content="#ff0000" />
+      <meta name="theme-color" content="#ffffff" />
+    </Helmet>
   )
 }
 

@@ -1,6 +1,8 @@
 import React from 'react'
 import { MDXProvider } from "@mdx-js/react"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
+import Helmet from 'react-helmet'
+import SEO from "../seo"
 import backArrow from '../../assets/Back-Arrow-White--20px.svg'
 import "./CaseStudyLayout.scss"
 
@@ -30,7 +32,13 @@ const socials = {
 
 
 interface TemplateProps {
-    children: any
+    children: any,
+    pageContext: {
+        frontmatter: {
+            title: string,
+            description: string
+        }
+    }
 }
 
 const P = props => {
@@ -81,37 +89,101 @@ const components = {
     a: Anchor
 }
 
-const Template = (props: TemplateProps) => (
-    <MDXProvider components={components}>
-        <div className="case-study">
-            {props.children}
-        </div>
-        <footer className="case-study-footer">
-            <div className="case-study-footer__links">
-                <Link to="/" className="case-study-footer__home-link">
-                    <img src={backArrow} width={20} height={20} />
-                    <span>Tin Yeah No</span>
-                </Link>
-                <a href="mailto:jeremy@tinyeahno.com" className="case-study-footer__mailto-link">jeremy@tinyeahno.com</a>
-                <div className="case-study-footer__social-links">
+const Template = (props: TemplateProps) => {
+    const { pageContext } = props;
+    const { frontmatter } = pageContext;
+    const { title, description } = frontmatter
 
-                    {Object.keys(socials).map(key => {
-                        return (
-                            <a
-                                className="social-icon-link"
-                                href={socials[key].link}
-                                target="_blank"
-                                key={key}
-                            >
-                                <img src={socials[key].icon} className="social-icon" />
-                            </a>
-                        )
-                    })}
-                </div>
+    const { site } = useStaticQuery(
+        graphql`
+          query {
+            site {
+              siteMetadata {
+                title
+                description
+                author
+              }
+            }
+          }
+        `
+    )
+
+    return (
+        <MDXProvider components={components}>
+            <SEO title={title} />
+            <Helmet
+                title={title}
+                titleTemplate={`%s | ${site.siteMetadata.title}`}
+                description={description}
+                meta={[
+                    {
+                        property: 'og:title',
+                        content: title
+                    },
+                    {
+                        property: 'og:description',
+                        content: description
+                    },
+                    {
+                        property: 'og:image:width',
+                        content: 1472
+                    },
+                    {
+                        property: 'og:image:height',
+                        content: 920
+                    },
+                    {
+                        property: `og:type`,
+                        content: `website`,
+                    },
+                    {
+                        name: `twitter:card`,
+                        content: `summary_large_image`,
+                    },
+                    {
+                        name: `twitter:creator`,
+                        content: site.siteMetadata.author,
+                    },
+                    {
+                        name: `twitter:title`,
+                        content: title,
+                    },
+                    {
+                        name: `twitter:description`,
+                        content: description,
+                    },
+                ]}
+            />
+            <div className="case-study">
+                {props.children}
             </div>
-            <p className="case-study-footer__copyright-text">© Jeremy Tinianow 2020</p>
-        </footer>
-    </MDXProvider>
-)
+            <footer className="case-study-footer">
+                <div className="case-study-footer__links">
+                    <Link to="/" className="case-study-footer__home-link">
+                        <img src={backArrow} width={20} height={20} />
+                        <span>Tin Yeah No</span>
+                    </Link>
+                    <a href="mailto:jeremy@tinyeahno.com" className="case-study-footer__mailto-link">jeremy@tinyeahno.com</a>
+                    <div className="case-study-footer__social-links">
+
+                        {Object.keys(socials).map(key => {
+                            return (
+                                <a
+                                    className="social-icon-link"
+                                    href={socials[key].link}
+                                    target="_blank"
+                                    key={key}
+                                >
+                                    <img src={socials[key].icon} className="social-icon" />
+                                </a>
+                            )
+                        })}
+                    </div>
+                </div>
+                <p className="case-study-footer__copyright-text">© Jeremy Tinianow 2020</p>
+            </footer>
+        </MDXProvider>
+    )
+}
 
 export default Template
