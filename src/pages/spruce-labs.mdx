@@ -1,11 +1,30 @@
+---
+title: Spruce Labs
+description: Visual identity refresh for an up and coming technology startup.
+---
+
+import Helmet from 'react-helmet'
 import CaseStudyIntro from '../components/CaseStudyIntro/CaseStudyIntro'
 import CaseStudyConclusion from '../components/CaseStudyConclusion/CaseStudyConclusion'
 import NextCaseStudy from '../components/NextCaseStudy/NextCaseStudy'
 import Wrapper from '../components/Wrapper/Wrapper'
 import Container from '../components/Container/Container'
 import heroImage from '../images/Spruce-Labs-Hero@2x.png'
+import shareImage from '../images/Spruce-Labs-Thumb@2x.png'
 import logoLoop from './spruce-labs/Logo-Loop.gif'
 
+<Helmet
+    meta={[
+        {
+            property: 'og:image',
+            content: shareImage
+        },
+        {
+            name: 'twitter:image',
+            content: shareImage
+        }
+    ]}
+/>
 
 <CaseStudyIntro
     title="Spruce Labs"

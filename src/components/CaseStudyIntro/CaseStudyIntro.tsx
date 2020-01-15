@@ -120,8 +120,8 @@ const CaseStudyIntro = (props: CaseStudyIntroProps) => {
 
                             {aside && aside.length > 0 &&
                                 <aside className="case-study-intro__aside">
-                                    {aside.map(item => (
-                                        <ListBlock {...item} />
+                                    {aside.map((item, idx) => (
+                                        <ListBlock key={idx} {...item} />
                                     ))}
                                 </aside>
                             }
