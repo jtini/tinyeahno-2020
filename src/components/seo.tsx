@@ -27,6 +27,7 @@ function SEO({ description, lang, meta, title }: { description: string, lang: st
   )
 
   const metaDescription = description || site.siteMetadata.description
+  console.log({ meta })
 
   return (
     <Helmet
@@ -86,6 +87,7 @@ function SEO({ description, lang, meta, title }: { description: string, lang: st
         },
       ].concat(meta)}
     >
+      <link rel="canonical" href="https://tinyeahno.com" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
