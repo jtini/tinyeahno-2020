@@ -58,6 +58,7 @@
 .case-study-intro__subtitle {
     margin-top: 0.25rem;
     font-size: ms(0);
+    color: $text-on-light-subdued;
 
     @media screen and (min-width: 760px) {
         font-size: ms(1, $thread: desktop);
@@ -115,4 +116,22 @@
 
 .case-study-intro__aside-list-item + .case-study-intro__aside-list-item {
     margin-top: 0.75rem;
+}
+
+.case-study-intro__text .body:not(.bold) {
+    color: $text-on-light-subdued;
+}
+
+.case-study-intro__home-link:hover {
+    .case-study-intro__home-link-icon {
+        transform: translate(-0.5rem, 0);
+    }
+}
+
+.case-study-intro__home-link-icon {
+    transition: transform 200ms ease-out;
+
+    .case-study-intro__home-link:hover & {
+        transform: translate(-0.25rem, 0);
+    }
 }

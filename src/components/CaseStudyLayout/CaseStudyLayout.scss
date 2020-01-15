@@ -48,6 +48,10 @@
     margin-right: auto;
     line-height: $line-height-l;
 
+    &:not(.case-study__body-heading) {
+        color: $text-on-light-subdued;
+    }
+
     blockquote & {
         @extend %subheadline;
         line-height: $line-height-l;
@@ -120,6 +124,16 @@
     text-decoration: none;
 
     > span { margin-left: 0.25rem; }
+}
+
+
+
+.case-study-footer__home-link-icon {
+    transition: transform 200ms ease-out;
+
+    .case-study-footer__home-link:hover & {
+        transform: translate(-0.25rem, 0);
+    }
 }
 
 .case-study-footer__mailto-link {

@@ -160,7 +160,7 @@ const Template = (props: TemplateProps) => {
             <footer className="case-study-footer">
                 <div className="case-study-footer__links">
                     <Link to="/" className="case-study-footer__home-link">
-                        <img src={backArrow} width={20} height={20} />
+                        <img className="case-study-footer__home-link-icon" src={backArrow} width={20} height={20} />
                         <span>Tin Yeah No</span>
                     </Link>
                     <a href="mailto:jeremy@tinyeahno.com" className="case-study-footer__mailto-link">jeremy@tinyeahno.com</a>

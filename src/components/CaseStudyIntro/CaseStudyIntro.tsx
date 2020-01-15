@@ -97,7 +97,7 @@ const CaseStudyIntro = (props: CaseStudyIntroProps) => {
                 />
                 <div className="case-study-intro__inner wrapper">
                     <div className="case-study-intro__container">
-                        <h1 className="case-study-intro__title title display">{title}</h1>
+                        <h1 className="case-study-intro__title large-body bold">{title}</h1>
                         <p className="case-study-intro__subtitle">{subtitle}</p>
 
 
@@ -130,7 +130,7 @@ const CaseStudyIntro = (props: CaseStudyIntroProps) => {
                 </div>
                 <Link to="/" className="case-study-intro__home-link">
                     <img src={backArrow} width={20} height={20} className="case-study-intro__home-link-icon" />
-                    <span className="case-study-intro__home-text">Tin Yeah No</span>
+                    <span className="case-study-intro__home-text body bold">Tin Yeah No</span>
                 </Link>
             </section>
         </>
