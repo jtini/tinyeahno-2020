@@ -6,10 +6,10 @@ import SEO from "../components/seo"
 import CaseStudyLink from '../components/CaseStudyLink/CaseStudyLink'
 import "./landing-page.scss"
 
-const hwHero = require('../images/Heartwood-Hero@2x.png')
-const cinebodyHero = require('../images/Cinebody-Hero@2x.png')
-const geosureHero = require('../images/GeoSure-Hero@2x.png')
-const spruceLabsHero = require('../images/Spruce-Labs-Hero@2x.png')
+const hwThumb = require('../images/Heartwood-Thumb@2x.png')
+const cinebodyThumb = require('../images/Cinebody-Thumb@2x.png')
+const geosureThumb = require('../images/GeoSure-Thumb@2x.png')
+const spruceLabsThumb = require('../images/Spruce-Labs-Thumb@2x.png')
 
 const dribbbleIcon = require('../assets/Dribbble-Icon.svg')
 const instagramIcon = require('../assets/Instagram-Icon.svg')
@@ -19,7 +19,7 @@ const twitterIcon = require('../assets/Twitter-Icon.svg')
 const caseStudies = {
   heartwood: {
     image: {
-      src: hwHero,
+      src: hwThumb,
       width: 736,
       height: 460
     },
@@ -30,7 +30,7 @@ const caseStudies = {
   },
   spruceLabs: {
     image: {
-      src: spruceLabsHero,
+      src: spruceLabsThumb,
       width: 736,
       height: 460
     },
@@ -41,7 +41,7 @@ const caseStudies = {
   },
   cinebody: {
     image: {
-      src: cinebodyHero,
+      src: cinebodyThumb,
       width: 736,
       height: 460
     },
@@ -52,7 +52,7 @@ const caseStudies = {
   },
   geosure: {
     image: {
-      src: geosureHero,
+      src: geosureThumb,
       width: 736,
       height: 460
     },
