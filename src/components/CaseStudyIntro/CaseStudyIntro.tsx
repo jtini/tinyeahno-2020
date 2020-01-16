@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import { Link } from 'gatsby'
+import cx from 'classnames'
 
 import "./CaseStudyIntro.scss"
 
@@ -74,7 +75,8 @@ interface CaseStudyIntroProps {
     subtitle?: string,
     image?: HeroImage,
     content?: ContentPiece[],
-    aside?: ListBlockProps[]
+    aside?: ListBlockProps[],
+    darkBg?: boolean
 }
 
 const blocks = {
@@ -84,10 +86,10 @@ const blocks = {
 }
 
 const CaseStudyIntro = (props: CaseStudyIntroProps) => {
-    const { title, subtitle, image, content, aside } = props;
+    const { title, subtitle, image, content, aside, darkBg } = props;
     return (
         <>
-            <section className="case-study-intro">
+            <section className={cx("case-study-intro", { "case-study-intro--dark-bg": darkBg })}>
                 <img
                     className="case-study-intro__hero-image"
                     src={image.src}
@@ -139,7 +141,8 @@ const CaseStudyIntro = (props: CaseStudyIntroProps) => {
 }
 
 CaseStudyIntro.defaultProps = {
-    content: []
+    content: [],
+    darkBg: false
 }
 
 export default CaseStudyIntro

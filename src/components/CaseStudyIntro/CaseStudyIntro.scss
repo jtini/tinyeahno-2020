@@ -101,7 +101,7 @@
 }
 
 .case-study-intro__aside {
-    flex: 0 0 auto;
+    flex: 0 1 auto;
     margin-top: 2rem;
 
     @media screen and (min-width: 800px) {
@@ -139,4 +139,9 @@
     .case-study-intro__home-link:hover & {
         transform: translate(-0.25rem, 0);
     }
+}
+
+.case-study-intro--dark-bg {
+    .case-study-intro__home-link-icon { fill: $bg; }
+    .case-study-intro__home-text { color: $bg; }
 }
