@@ -116,6 +116,7 @@ const IndexPage = () => (
       <div className="landing-page-about__inner">
         <h2 className="landing-page-about__title subtitle display">Who is Jeremy?</h2>
         <p className="landing-page-about__subtitle subheadline"> I design digital products, visual identities, and the systems that power them.</p>
+        <p className="landing-page-about__body body">I’ve had the pleasure of designing and building digital things for some great organizations including American Airlines, Gatorade, AAA, Charles Schwab, Braintree, and Fruit of the Loom.</p>
         <p className="landing-page-about__body body">I’m also a Web Chair with AIGA Colorado and I co-host meetups with Figma Denver.</p>
         <div className="landing-page-about__services">
           <div className="landing-page-about__services-list-wrapper">
