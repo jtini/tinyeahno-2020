@@ -134,6 +134,7 @@
 
 .case-study-intro__home-link-icon {
     transition: transform 200ms ease-out;
+    fill: $text-on-light;
 
     .case-study-intro__home-link:hover & {
         transform: translate(-0.25rem, 0);
