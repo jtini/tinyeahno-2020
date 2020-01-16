@@ -20,7 +20,7 @@ function SEO({ description, lang, meta, title }: { description: string, lang: st
             title
             description
             author
-            canonicalUrl
+            siteUrl
           }
         }
       }
@@ -28,7 +28,7 @@ function SEO({ description, lang, meta, title }: { description: string, lang: st
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const canonicalUrl = site.siteMetadata.canonicalUrl
+  const siteUrl = site.siteMetadata.siteUrl
 
   return (
     <Helmet
@@ -90,7 +90,7 @@ function SEO({ description, lang, meta, title }: { description: string, lang: st
       link={[
         {
           rel: 'canonical',
-          href: canonicalUrl
+          href: siteUrl
         },
       ]}
     />
