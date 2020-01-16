@@ -1,0 +1,90 @@
+---
+title: GeoSure
+description: Native apps designed to empower world travelers with safety and security data.
+slug: geosure
+---
+
+import Helmet from 'react-helmet'
+import CaseStudyIntro from '../components/CaseStudyIntro/CaseStudyIntro'
+import CaseStudyConclusion from '../components/CaseStudyConclusion/CaseStudyConclusion'
+import NextCaseStudy from '../components/NextCaseStudy/NextCaseStudy'
+import heroImage from '../images/GeoSure-Hero@2x.png'
+import shareImage from '../images/Cinebody-Thumb@2x.png'
+import heartwoodThumb from '../images/Heartwood-Thumb@2x.png'
+
+<Helmet
+    meta={[
+        {
+            property: 'og:image',
+            content: shareImage
+        },
+        {
+            name: 'twitter:image',
+            content: shareImage
+        }
+    ]}
+/>
+
+<CaseStudyIntro
+    title="GeoSure"
+    subtitle="Native apps designed to empower world travelers with safety and security data."
+    image={{
+        src: heroImage,
+        alt: "GeoSure hero image"
+    }}
+    content={[
+        {
+            kind: 'text',
+            headline: 'The Brief',
+            text: "GeoSure is a mobile app that empowers individuals to travel with confidence by providing objective, personalized, real-time information about neighborhoods, cities, and countries the world over. Our relationship began with a re-design of the old GeoSure app in 2017 and continued the following year with the addition of “premium” features for enterprise. The initial redesign scrapped all the previous app’s styling and established a fresh perspective on GeoSure’s digital presence."
+        }
+    ]}
+    aside={[
+        {
+            headline: 'My Role',
+            items: [
+                'Design Strategy',
+                'Digital Product Design',
+                'Visual Design'
+            ]
+        }, {
+            headline: 'Download the App',
+            items: [
+                '[Apple App Store](https://itunes.apple.com/us/app/geosure/id811335043)',
+                '[Google Play](https://play.google.com/store/apps/details?id=com.geosure&hl=en)'
+            ]
+        }
+    ]}
+    darkBg
+/>
+
+![Before diving into UI design, I established an overall flavor for the design direction.](/geosure/GeoSure-Style@2x.png)
+
+In the first round of redesign, I coordinated with the GeoSure team to translate their recent re-branding efforts into a component library that adheres to ADA guidelines while staying true to the visual direction of the brand. I designed the experience of the initial features, as well as the new features in round two, and was responsible for overall visual direction and execution of the app. For user on-boarding flows and empty states, I created a set of illustrations and icons.
+
+![Onboarding is crucial for a product that presents otherwise esoteric information.](/geosure/Onboarding@2x.png)
+
+![Custom icons for broad safety categories.](/geosure/Icons@2x.png)
+
+![Example of night and day modes.](/geosure/Nightmode-01@2x.png)
+
+![The night mode feature allows users to avoid drawing attention to themselves.](/geosure/Nightmode-02@2x.png)
+
+![The Location Detail view puts the overall safety score front and center followed by supporting and related information.](/geosure/Location@2x.png)
+
+<CaseStudyConclusion
+    headline="Results"
+    text="Since launch, GeoSure has been featured in the Apple App Store, was included in Newsweek's list of the best travel apps of 2019, and has appeared on several “best of” lists for travel apps."
+/>
+
+<NextCaseStudy
+    slug="heartwood"
+    image={{
+        src: heartwoodThumb,
+        width: 736,
+        height: 460
+    }}
+    title="Heartwood"
+    description="The operating system for brick and mortar businesses."
+    tags='Design Strategy, Digital Product Design, Visual Design'
+/>

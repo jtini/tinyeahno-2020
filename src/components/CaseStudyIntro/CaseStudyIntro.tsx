@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import { Link } from 'gatsby'
-import backArrow from '../../assets/Back-Arrow--20px.svg'
+import cx from 'classnames'
+import ReactMarkdown from 'react-markdown'
 
 import "./CaseStudyIntro.scss"
 
@@ -49,7 +50,11 @@ const ListBlock = (props: ListBlockProps) => {
             {items && items.length > 0 &&
                 <ul className="case-study-intro__aside-list">
                     {items.map(item => (
-                        <li key={item} className="case-study-intro__aside-list-item small-body mono">{item}</li>
+                        <li
+                            key={item}
+                            className="case-study-intro__aside-list-item small-body mono">
+                            <ReactMarkdown source={item} linkTarget="_blank" />
+                        </li>
                     ))}
                 </ul>
             }
@@ -75,7 +80,8 @@ interface CaseStudyIntroProps {
     subtitle?: string,
     image?: HeroImage,
     content?: ContentPiece[],
-    aside?: ListBlockProps[]
+    aside?: ListBlockProps[],
+    darkBg?: boolean
 }
 
 const blocks = {
@@ -85,10 +91,10 @@ const blocks = {
 }
 
 const CaseStudyIntro = (props: CaseStudyIntroProps) => {
-    const { title, subtitle, image, content, aside } = props;
+    const { title, subtitle, image, content, aside, darkBg } = props;
     return (
         <>
-            <section className="case-study-intro">
+            <section className={cx("case-study-intro", { "case-study-intro--dark-bg": darkBg })}>
                 <img
                     className="case-study-intro__hero-image"
                     src={image.src}
@@ -129,7 +135,9 @@ const CaseStudyIntro = (props: CaseStudyIntroProps) => {
                     </div>
                 </div>
                 <Link to="/" className="case-study-intro__home-link">
-                    <img src={backArrow} width={20} height={20} className="case-study-intro__home-link-icon" />
+                    <svg className="case-study-intro__home-link-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.6663 9.16732H6.52467L11.183 4.50898L9.99967 3.33398L3.33301 10.0007L9.99967 16.6673L11.1747 15.4923L6.52467 10.834H16.6663V9.16732Z" />
+                    </svg>
                     <span className="case-study-intro__home-text body bold">Tin Yeah No</span>
                 </Link>
             </section>
@@ -138,7 +146,8 @@ const CaseStudyIntro = (props: CaseStudyIntroProps) => {
 }
 
 CaseStudyIntro.defaultProps = {
-    content: []
+    content: [],
+    darkBg: false
 }
 
 export default CaseStudyIntro

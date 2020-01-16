@@ -103,13 +103,13 @@ const Template = (props: TemplateProps) => {
                 title
                 description
                 author
-                canonicalUrl
+                siteUrl
               }
             }
           }
         `
     )
-    const canonicalUrl = site.siteMetadata.canonicalUrl
+    const siteUrl = site.siteMetadata.siteUrl
 
     return (
         <MDXProvider components={components}>
@@ -141,7 +141,7 @@ const Template = (props: TemplateProps) => {
                     },
                     {
                         property: `og:url`,
-                        content: canonicalUrl + slug
+                        content: siteUrl + slug
                     },
                     {
                         name: `twitter:card`,
@@ -163,7 +163,7 @@ const Template = (props: TemplateProps) => {
                 link={[
                     {
                         rel: 'canonical',
-                        href: canonicalUrl + slug
+                        href: siteUrl + slug
                     },
                 ]}
 

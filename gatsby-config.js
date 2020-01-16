@@ -4,7 +4,7 @@ module.exports = {
     description: `Hi, I’m Jeremy. I’m a designer who believes in making things better than they need to be.`,
     author: `@jtinianow`,
     // TODO: Change this before going live
-    canonicalUrl: 'https://jtini.github.io/tinyeahno-2020/'
+    siteUrl: 'https://jtini.github.io/tinyeahno-2020/'
   },
   pathPrefix: '/tinyeahno-2020',
   plugins: [
@@ -67,6 +67,12 @@ module.exports = {
         defaultLayouts: {
           default: require.resolve("./src/components/CaseStudyLayout/CaseStudyLayout.tsx")
         }
+      }
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: ["/heartwood-process"]
       }
     }
   ],

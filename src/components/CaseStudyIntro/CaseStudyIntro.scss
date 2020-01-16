@@ -46,6 +46,10 @@
     p {
         max-width: 47.5rem;
     }
+
+    .case-study-intro__subtitle {
+        max-width: 36rem;
+    }
 }
 
 .case-study-intro__hero-image {
@@ -97,7 +101,7 @@
 }
 
 .case-study-intro__aside {
-    flex: 0 0 auto;
+    flex: 0 1 auto;
     margin-top: 2rem;
 
     @media screen and (min-width: 800px) {
@@ -118,6 +122,11 @@
     margin-top: 0.75rem;
 }
 
+.case-study-intro__aside-list-item a {
+    text-decoration: none;
+    color: $primary;
+}
+
 .case-study-intro__text .body:not(.bold) {
     color: $text-on-light-subdued;
 }
@@ -130,8 +139,14 @@
 
 .case-study-intro__home-link-icon {
     transition: transform 200ms ease-out;
+    fill: $text-on-light;
 
     .case-study-intro__home-link:hover & {
         transform: translate(-0.25rem, 0);
     }
+}
+
+.case-study-intro--dark-bg {
+    .case-study-intro__home-link-icon { fill: $bg; }
+    .case-study-intro__home-text { color: $bg; }
 }
