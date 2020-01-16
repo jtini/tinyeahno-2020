@@ -91,7 +91,7 @@ const IndexPage = () => (
           <p className="body bold">Tin Yeah No</p>
           <a className="landing-page__hero-mailto body" href="mailto:jeremy@tinyeahno.com">jeremy@tinyeahno.com</a>
         </div>
-        <h1 className="landing-page__hero-main title display">Hi, I’m Jeremy. I’m a designer who believes in making things better than they need to be.</h1>
+        <h1 className="landing-page__hero-main title display foit">Hi, I’m Jeremy. I’m a designer who believes in making things better than they need to be.</h1>
       </div>
     </section>
     <section className="case-study-grid">

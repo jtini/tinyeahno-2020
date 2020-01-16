@@ -43,15 +43,29 @@ p {
     @extend %display;
     @extend %book;
 
-    .wf-moret-n3-loading & {
+    &.foit {
+        opacity: 0;
         font-family: Georgia, serif;
         letter-spacing: -0.1em;
-        opacity: 0;
+
+        .wf-moret-n3-active &,
+        .wf-moret-n3-inactive & {
+            @extend %display;
+            transition: opacity 200ms ease-out;
+            opacity: 1;
+            letter-spacing: -1px;
+        }
     }
 
-    .wf-moret-n3-active & {
-        transition: opacity 200ms ease-out;
-    }
+    // .wf-moret-n3-loading & {
+    //     font-family: Georgia, serif;
+    //     letter-spacing: -0.1em;
+    //     opacity: 0;
+    // }
+
+    // .wf-moret-n3-active & {
+    //     transition: opacity 200ms ease-out;
+    // }
 };
 
 .mono {
