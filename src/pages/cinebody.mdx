@@ -1,0 +1,51 @@
+---
+title: Cinebody
+description: Enabling video teams to collaborate with real people around the world.
+slug: cinebody
+---
+
+import Helmet from 'react-helmet'
+import CaseStudyIntro from '../components/CaseStudyIntro/CaseStudyIntro'
+import CaseStudyConclusion from '../components/CaseStudyConclusion/CaseStudyConclusion'
+import NextCaseStudy from '../components/NextCaseStudy/NextCaseStudy'
+import heroImage from '../images/Cinebody-Hero@2x.png'
+import shareImage from '../images/Cinebody-Thumb@2x.png'
+import geosureThumb from '../images/GeoSure-Thumb@2x.png'
+
+<Helmet
+    meta={[
+        {
+            property: 'og:image',
+            content: shareImage
+        },
+        {
+            name: 'twitter:image',
+            content: shareImage
+        }
+    ]}
+/>
+
+<CaseStudyIntro
+    title="Cinebody"
+    subtitle="Enabling video teams to collaborate with real people around the world."
+    image={{
+        src: heroImage,
+        alt: "Heartwood hero image"
+    }}
+    content={[
+        {
+            kind: 'text',
+            headline: 'The Brief',
+            text: "Cinebody is a global platform that enables brands to crowd-source footage shot on the iPhone and collaborate with editors to create video content at a rapid pace. The 2.3 feature release focused on improvements to user onboarding, better affordance to make the platform feel more intuitive, and the launch of public “brand pages” to help clients recruit filmers around the world."
+        }
+    ]}
+    aside={[
+        {
+            headline: 'My Role',
+            items: [
+                'Digital Product Design',
+                'Frontend Development'
+            ]
+        }
+    ]}
+/>
