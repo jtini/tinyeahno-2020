@@ -44,6 +44,10 @@ module.exports = {
       options: {
         typekit: {
           id: 'snu1mhw'
+        },
+        custom: {
+          families: ['etc_trispaceregular_narrow'],
+          urls: ['/fonts.css']
         }
       }
     },
