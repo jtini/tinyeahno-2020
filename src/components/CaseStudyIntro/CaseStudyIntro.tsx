@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import { Link } from 'gatsby'
 import cx from 'classnames'
+import ReactMarkdown from 'react-markdown'
 
 import "./CaseStudyIntro.scss"
 
@@ -49,7 +50,11 @@ const ListBlock = (props: ListBlockProps) => {
             {items && items.length > 0 &&
                 <ul className="case-study-intro__aside-list">
                     {items.map(item => (
-                        <li key={item} className="case-study-intro__aside-list-item small-body mono">{item}</li>
+                        <li
+                            key={item}
+                            className="case-study-intro__aside-list-item small-body mono">
+                            <ReactMarkdown source={item} linkTarget="_blank" />
+                        </li>
                     ))}
                 </ul>
             }

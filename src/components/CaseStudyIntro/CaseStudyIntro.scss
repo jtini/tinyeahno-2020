@@ -122,6 +122,11 @@
     margin-top: 0.75rem;
 }
 
+.case-study-intro__aside-list-item a {
+    text-decoration: none;
+    color: $primary;
+}
+
 .case-study-intro__text .body:not(.bold) {
     color: $text-on-light-subdued;
 }
