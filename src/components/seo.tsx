@@ -20,6 +20,7 @@ function SEO({ description, lang, meta, title }: { description: string, lang: st
             title
             description
             author
+            canonicalUrl
           }
         }
       }
@@ -27,6 +28,7 @@ function SEO({ description, lang, meta, title }: { description: string, lang: st
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const canonicalUrl = site.siteMetadata.canonicalUrl
 
   return (
     <Helmet
@@ -88,7 +90,7 @@ function SEO({ description, lang, meta, title }: { description: string, lang: st
       link={[
         {
           rel: 'canonical',
-          href: 'https://jtini.github.io/tinyeahno-2020/'
+          href: canonicalUrl
         },
       ]}
     />

@@ -36,7 +36,8 @@ interface TemplateProps {
     pageContext: {
         frontmatter: {
             title: string,
-            description: string
+            description: string,
+            slug: string
         }
     }
 }
@@ -92,7 +93,7 @@ const components = {
 const Template = (props: TemplateProps) => {
     const { pageContext } = props;
     const { frontmatter } = pageContext;
-    const { title, description } = frontmatter
+    const { title, description, slug } = frontmatter
 
     const { site } = useStaticQuery(
         graphql`
@@ -102,11 +103,13 @@ const Template = (props: TemplateProps) => {
                 title
                 description
                 author
+                canonicalUrl
               }
             }
           }
         `
     )
+    const canonicalUrl = site.siteMetadata.canonicalUrl
 
     return (
         <MDXProvider components={components}>
@@ -153,6 +156,13 @@ const Template = (props: TemplateProps) => {
                         content: description,
                     },
                 ]}
+                link={[
+                    {
+                        rel: 'canonical',
+                        href: canonicalUrl + slug
+                    },
+                ]}
+
             />
             <div className="case-study">
                 {props.children}
