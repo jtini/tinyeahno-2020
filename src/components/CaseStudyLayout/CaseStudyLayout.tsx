@@ -140,6 +140,10 @@ const Template = (props: TemplateProps) => {
                         content: `website`,
                     },
                     {
+                        property: `og:url`,
+                        content: canonicalUrl + slug
+                    },
+                    {
                         name: `twitter:card`,
                         content: `summary_large_image`,
                     },
