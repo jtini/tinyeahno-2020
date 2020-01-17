@@ -47,7 +47,7 @@ module.exports = {
         },
         custom: {
           families: ['etc_trispaceregular_narrow'],
-          urls: ['/fonts.css']
+          urls: ['../fonts.css']
         }
       }
     },
