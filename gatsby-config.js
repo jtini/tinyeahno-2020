@@ -37,7 +37,12 @@ module.exports = {
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        useResolveUrlLoader: true
+      }
+    },
     `gatsby-plugin-typescript`,
     {
       resolve: 'gatsby-plugin-web-font-loader',
