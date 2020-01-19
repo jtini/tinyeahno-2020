@@ -116,8 +116,8 @@ const IndexPage = () => (
       <div className="landing-page-about__inner">
         <h2 className="landing-page-about__title subtitle display">Who is Jeremy?</h2>
         <p className="landing-page-about__subtitle subheadline"> I design digital products, visual identities, and the systems that power them.</p>
-        <p className="landing-page-about__body body">I’ve had the pleasure of designing and building digital things for some great organizations including American Airlines, Gatorade, AAA, Charles Schwab, Braintree, and Fruit of the Loom.</p>
-        <p className="landing-page-about__body body">I’m also a Web Chair with AIGA Colorado and I co-host meetups with Figma Denver.</p>
+        <p className="landing-page-about__body body">I’ve had the pleasure of designing and building digital things for some great organizations including <span className="highlight">American Airlines</span>, <span className="highlight">Gatorade</span>, <span className="highlight">AAA</span>, <span className="highlight">Charles Schwab</span>, <span className="highlight">Braintree</span>, and <span className="highlight">Fruit of the Loom</span>.</p>
+        <p className="landing-page-about__body body">I’m also a <span className="highlight">Web Chair with AIGA Colorado</span> and I co-host meetups with <span className="highlight">Figma Denver</span>.</p>
         <div className="landing-page-about__services">
           <div className="landing-page-about__services-list-wrapper">
             <h3 className="large-body bold">Things I Make</h3>
@@ -155,7 +155,7 @@ const IndexPage = () => (
         </div>
         <div className="landing-page-about__contact">
           <p className="landing-page-about__contact-title small-body mono bold">Get in touch</p>
-          <p className="body">If you’re interested in working together, feel free to reach out at <a href="mailto:jeremy@tinyeahno.com">jeremy@tinyeahno.com</a>.</p>
+          <p className="landing-page-about__contact-body body">If you’re interested in working together, feel free to reach out at <a href="mailto:jeremy@tinyeahno.com" className="highlight">jeremy@tinyeahno.com</a>.</p>
         </div>
         <div className="landing-page-about__social">
           <p className="landing-page-about__social-title small-body mono bold">Get social</p>
