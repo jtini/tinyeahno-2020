@@ -172,7 +172,7 @@ const IndexPage = () => (
             )
           })}
         </div>
-        <p className="landing-page-about__copyright small-body">© Jeremy Tinianow 2020</p>
+        <p className="landing-page-about__copyright small-body">© Jeremy Tinianow 2020 · <Link to="/colophon" id="colophon-link">Colophon</Link></p>
       </div>
     </section>
   </Layout>

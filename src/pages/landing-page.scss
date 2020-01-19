@@ -76,8 +76,8 @@
 
 .landing-page-about {
     padding: 1rem;
-    background-color: $text-on-light;
-    color: $bg;
+    background-color: $dark-bg;
+    color: $text-on-dark;
 
     @media screen and (min-width: 500px) {
         padding: 1.5rem;

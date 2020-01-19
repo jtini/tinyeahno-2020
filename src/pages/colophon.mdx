@@ -1,0 +1,24 @@
+import { Link } from 'gatsby'
+import './colophon.scss'
+
+export default ({children}) => (
+    <div className="colophon">
+        <div className="colophon__inner">
+            <Link to="/#colophon-link" className="colophon__home-link">
+                <svg className="colophon__home-link-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.6663 9.16732H6.52467L11.183 4.50898L9.99967 3.33398L3.33301 10.0007L9.99967 16.6673L11.1747 15.4923L6.52467 10.834H16.6663V9.16732Z" />
+                </svg>
+                <span className="colophon__home-text body">Tin Yeah No</span>
+            </Link>
+            {children}
+        </div>
+    </div>
+)
+
+# Colophon
+
+Jeremy Tinianow designed and developed this site. “Tin Yeah No” is how you pronounce his last name.
+
+This site was designed in [Figma](https://www.figma.com/) and built with [Gatsby](https://www.gatsbyjs.org/). It's hosted on [Github](https://github.com/).
+
+The big beautiful serif display face is called [Moret](https://thenorthernblock.co.uk/font/moret) and was designed by [Jamie Chang](https://thenorthernblock.co.uk/blog/meet-the-team-jamie-chang). Most of the type is set in [National 2](https://klim.co.nz/retail-fonts/national-2/) from [Klim Type Foundry](https://klim.co.nz/). The little monospaced bits use [ETC Trispace](https://fontsarena.com/etc-trispace-by-etc/) from [Etcetera Type Company](https://www.etc.supply/).
