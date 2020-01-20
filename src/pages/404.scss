@@ -1,0 +1,45 @@
+@import "../styles/base";
+
+.not-found {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: $bg;
+}
+
+.not-found__card {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: $bg;
+}
+
+.not-found__card-inner {
+    padding: 2rem;
+    text-align: center;
+}
+
+.not-found__home-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    width: 100%;
+    background-color: $primary;
+    color: $bg;
+    text-decoration: none;
+    text-align: center;
+
+    &:hover {
+        background-color: rgba($primary, 0.9);
+        .not-found__home-link-icon { transform: translate(-0.25rem, 0); }
+    }
+}
+
+.not-found__home-link-icon {
+    margin-right: 0.5rem;
+    fill: $bg;
+    transition: transform 200ms ease;
+}
