@@ -143,7 +143,7 @@ const Template = (props: TemplateProps) => {
                         },
                         {
                             property: `og:url`,
-                            content: siteUrl + slug
+                            content: `${siteUrl}/${slug}`
                         },
                         {
                             name: `twitter:card`,
@@ -165,7 +165,7 @@ const Template = (props: TemplateProps) => {
                     link={[
                         {
                             rel: 'canonical',
-                            href: siteUrl + slug
+                            content: `${siteUrl}/${slug}`
                         },
                     ]}
 

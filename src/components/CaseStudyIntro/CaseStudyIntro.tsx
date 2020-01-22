@@ -138,7 +138,11 @@ const CaseStudyIntro = (props: CaseStudyIntroProps) => {
                                 data[heroKey].childImageSharp.fluid) {
 
                                 return (
-                                    <Img fluid={data[heroKey].childImageSharp.fluid} className="case-study-intro__hero-image" />
+                                    <Img
+                                        fluid={data[heroKey].childImageSharp.fluid}
+                                        className="case-study-intro__hero-image"
+                                        alt={`${title} hero image`}
+                                    />
                                 )
                             }
                             return null
