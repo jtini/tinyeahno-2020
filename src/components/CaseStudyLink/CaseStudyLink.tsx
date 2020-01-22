@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, StaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 import './CaseStudyLink.scss'
 
@@ -7,24 +8,63 @@ export interface CaseStudyLinkProps {
     slug: string,
     title: string,
     description: string,
-    tags: string,
-    image: {
-        src: string,
-        width: number,
-        height: number
-    }
+    tags: string
 }
 
 const CaseStudyLink = (props: CaseStudyLinkProps) => {
-    const { slug, title, description, tags, image } = props
+    const { slug, title, description, tags } = props
     return (
         <div className="case-study-summary">
             <Link to={`/${slug}`} className="case-study-summary__link">
-                <img
-                    src={image.src}
-                    width={image.width}
-                    height={image.height}
-                    className="case-study-summary__image"
+
+                <StaticQuery
+                    query={graphql`
+                            query ThumbnailImagesQuery {
+                                cinebody: file(relativePath: { eq: "Cinebody-Thumb@2x.png" }) {
+                                    childImageSharp {
+                                        fluid(maxWidth: 768, quality: 70) {
+                                        ...GatsbyImageSharpFluid_withWebp
+                                        }
+                                    }
+                                }
+                                heartwood: file(relativePath: { eq: "Heartwood-Thumb@2x.png" }) {
+                                    childImageSharp {
+                                        fluid(maxWidth: 768, quality: 70) {
+                                        ...GatsbyImageSharpFluid_withWebp
+                                        }
+                                    }
+                                }
+                                geosure: file(relativePath: { eq: "GeoSure-Thumb@2x.png" }) {
+                                    childImageSharp {
+                                        fluid(maxWidth: 768, quality: 70) {
+                                        ...GatsbyImageSharpFluid_withWebp
+                                        }
+                                    }
+                                }
+                                sprucelabs: file(relativePath: { eq: "Spruce-Labs-Thumb@2x.png" }) {
+                                    childImageSharp {
+                                        fluid(maxWidth: 768, quality: 70) {
+                                        ...GatsbyImageSharpFluid_withWebp
+                                        }
+                                    }
+                                }
+                            }
+                        `}
+                    render={data => {
+                        const key = slug.split('-').join('')
+                        if (
+                            data[key] &&
+                            typeof data[key] !== 'undefined' &&
+                            data[key].childImageSharp &&
+                            data[key].childImageSharp.fluid) {
+
+                            return (
+                                <Img fluid={data[key].childImageSharp.fluid} className="case-study-summary__image" />
+                            )
+                        }
+                        return null
+                    }
+                    }
                 />
                 <div className="case-study-summary__text">
                     <h2 className="case-study-summary__title body bold">{`${title} `}</h2>

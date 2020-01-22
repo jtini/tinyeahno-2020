@@ -143,7 +143,7 @@ const Template = (props: TemplateProps) => {
                         },
                         {
                             property: `og:url`,
-                            content: siteUrl + slug
+                            content: `${siteUrl}/${slug}`
                         },
                         {
                             name: `twitter:card`,
@@ -165,7 +165,7 @@ const Template = (props: TemplateProps) => {
                     link={[
                         {
                             rel: 'canonical',
-                            href: siteUrl + slug
+                            content: `${siteUrl}/${slug}`
                         },
                     ]}
 
@@ -189,8 +189,9 @@ const Template = (props: TemplateProps) => {
                                         href={socials[key].link}
                                         target="_blank"
                                         key={key}
+                                        rel="noopener noreferrer"
                                     >
-                                        <img src={socials[key].icon} className="social-icon" />
+                                        <img src={socials[key].icon} className="social-icon" alt={`${key} icon`} />
                                     </a>
                                 )
                             })}
