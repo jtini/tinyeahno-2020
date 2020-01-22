@@ -22,28 +22,28 @@ const CaseStudyLink = (props: CaseStudyLinkProps) => {
                             query ThumbnailImagesQuery {
                                 cinebody: file(relativePath: { eq: "Cinebody-Thumb@2x.png" }) {
                                     childImageSharp {
-                                        fluid {
+                                        fluid(maxWidth: 768, quality: 100) {
                                         ...GatsbyImageSharpFluid
                                         }
                                     }
                                 }
                                 heartwood: file(relativePath: { eq: "Heartwood-Thumb@2x.png" }) {
                                     childImageSharp {
-                                        fluid {
+                                        fluid(maxWidth: 768, quality: 100) {
                                         ...GatsbyImageSharpFluid
                                         }
                                     }
                                 }
                                 geosure: file(relativePath: { eq: "GeoSure-Thumb@2x.png" }) {
                                     childImageSharp {
-                                        fluid {
+                                        fluid(maxWidth: 768, quality: 100) {
                                         ...GatsbyImageSharpFluid
                                         }
                                     }
                                 }
                                 sprucelabs: file(relativePath: { eq: "Spruce-Labs-Thumb@2x.png" }) {
                                     childImageSharp {
-                                        fluid {
+                                        fluid(maxWidth: 768, quality: 100) {
                                         ...GatsbyImageSharpFluid
                                         }
                                     }

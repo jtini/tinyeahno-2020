@@ -102,28 +102,28 @@ const CaseStudyIntro = (props: CaseStudyIntroProps) => {
                             query HeroImagesQuery {
                                 cinebody: file(relativePath: { eq: "Cinebody-Hero@2x.png" }) {
                                     childImageSharp {
-                                        fluid {
+                                        fluid(maxWidth: 1200, quality: 90) {
                                         ...GatsbyImageSharpFluid
                                         }
                                     }
                                 }
                                 heartwood: file(relativePath: { eq: "Heartwood-Hero@2x.png" }) {
                                     childImageSharp {
-                                        fluid {
+                                        fluid(maxWidth: 1200, quality: 90) {
                                         ...GatsbyImageSharpFluid
                                         }
                                     }
                                 }
                                 geosure: file(relativePath: { eq: "GeoSure-Hero@2x.png" }) {
                                     childImageSharp {
-                                        fluid {
+                                        fluid(maxWidth: 1200, quality: 90) {
                                         ...GatsbyImageSharpFluid
                                         }
                                     }
                                 }
                                 sprucelabs: file(relativePath: { eq: "Spruce-Labs-Hero@2x.png" }) {
                                     childImageSharp {
-                                        fluid {
+                                        fluid(maxWidth: 1200, quality: 90) {
                                         ...GatsbyImageSharpFluid
                                         }
                                     }
