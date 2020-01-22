@@ -166,6 +166,7 @@ const IndexPage = () => (
                 href={socials[key].link}
                 target="_blank"
                 key={key}
+                rel="noopener noreferrer"
               >
                 <img src={socials[key].icon} className="social-icon" alt={`${key} icon`} />
               </a>
