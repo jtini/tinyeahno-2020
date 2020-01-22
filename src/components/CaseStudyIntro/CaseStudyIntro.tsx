@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
-import { Link } from 'gatsby'
+import { Link, StaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import cx from 'classnames'
 import ReactMarkdown from 'react-markdown'
 
@@ -78,10 +79,10 @@ type ContentPiece = {
 interface CaseStudyIntroProps {
     title: string,
     subtitle?: string,
-    image?: HeroImage,
     content?: ContentPiece[],
     aside?: ListBlockProps[],
-    darkBg?: boolean
+    darkBg?: boolean,
+    heroKey: string
 }
 
 const blocks = {
@@ -91,16 +92,60 @@ const blocks = {
 }
 
 const CaseStudyIntro = (props: CaseStudyIntroProps) => {
-    const { title, subtitle, image, content, aside, darkBg } = props;
+    const { title, subtitle, content, aside, darkBg, heroKey } = props;
     return (
         <>
             <section className={cx("case-study-intro", { "case-study-intro--dark-bg": darkBg })}>
-                <img
-                    className="case-study-intro__hero-image"
-                    src={image.src}
-                    alt={image.alt}
-                    width={1400}
-                />
+                <div className="case-study-intro__hero-image_wrapper">
+                    <StaticQuery
+                        query={graphql`
+                            query HeroImagesQuery {
+                                cinebody: file(relativePath: { eq: "Cinebody-Hero@2x.png" }) {
+                                    childImageSharp {
+                                        fluid {
+                                        ...GatsbyImageSharpFluid
+                                        }
+                                    }
+                                }
+                                heartwood: file(relativePath: { eq: "Heartwood-Hero@2x.png" }) {
+                                    childImageSharp {
+                                        fluid {
+                                        ...GatsbyImageSharpFluid
+                                        }
+                                    }
+                                }
+                                geosure: file(relativePath: { eq: "GeoSure-Hero@2x.png" }) {
+                                    childImageSharp {
+                                        fluid {
+                                        ...GatsbyImageSharpFluid
+                                        }
+                                    }
+                                }
+                                sprucelabs: file(relativePath: { eq: "Spruce-Labs-Hero@2x.png" }) {
+                                    childImageSharp {
+                                        fluid {
+                                        ...GatsbyImageSharpFluid
+                                        }
+                                    }
+                                }
+                            }
+                        `}
+                        render={data => {
+                            if (
+                                data[heroKey] &&
+                                typeof data[heroKey] !== 'undefined' &&
+                                data[heroKey].childImageSharp &&
+                                data[heroKey].childImageSharp.fluid) {
+
+                                return (
+                                    <Img fluid={data[heroKey].childImageSharp.fluid} className="case-study-intro__hero-image" />
+                                )
+                            }
+                            return null
+                        }
+                        }
+                    />
+                </div>
                 <div className="case-study-intro__inner wrapper">
                     <div className="case-study-intro__container">
                         <h1 className="case-study-intro__title large-body bold">{title}</h1>
