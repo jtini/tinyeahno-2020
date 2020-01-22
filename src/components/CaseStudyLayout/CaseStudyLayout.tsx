@@ -190,7 +190,7 @@ const Template = (props: TemplateProps) => {
                                         target="_blank"
                                         key={key}
                                     >
-                                        <img src={socials[key].icon} className="social-icon" />
+                                        <img src={socials[key].icon} className="social-icon" alt={`${key} icon`} />
                                     </a>
                                 )
                             })}
