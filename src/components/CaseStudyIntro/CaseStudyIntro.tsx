@@ -142,6 +142,7 @@ const CaseStudyIntro = (props: CaseStudyIntroProps) => {
                                         fluid={data[heroKey].childImageSharp.fluid}
                                         className="case-study-intro__hero-image"
                                         alt={`${title} hero image`}
+                                        critical
                                     />
                                 )
                             }
