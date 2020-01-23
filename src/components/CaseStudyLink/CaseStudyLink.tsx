@@ -22,28 +22,28 @@ const CaseStudyLink = (props: CaseStudyLinkProps) => {
                             query ThumbnailImagesQuery {
                                 cinebody: file(relativePath: { eq: "Cinebody-Thumb@2x.png" }) {
                                     childImageSharp {
-                                        fluid(maxWidth: 768, quality: 70) {
+                                        fluid(maxWidth: 768, quality: 80) {
                                         ...GatsbyImageSharpFluid_withWebp
                                         }
                                     }
                                 }
                                 heartwood: file(relativePath: { eq: "Heartwood-Thumb@2x.png" }) {
                                     childImageSharp {
-                                        fluid(maxWidth: 768, quality: 70) {
+                                        fluid(maxWidth: 768, quality: 80) {
                                         ...GatsbyImageSharpFluid_withWebp
                                         }
                                     }
                                 }
                                 geosure: file(relativePath: { eq: "GeoSure-Thumb@2x.png" }) {
                                     childImageSharp {
-                                        fluid(maxWidth: 768, quality: 70) {
+                                        fluid(maxWidth: 768, quality: 80) {
                                         ...GatsbyImageSharpFluid_withWebp
                                         }
                                     }
                                 }
                                 sprucelabs: file(relativePath: { eq: "Spruce-Labs-Thumb@2x.png" }) {
                                     childImageSharp {
-                                        fluid(maxWidth: 768, quality: 70) {
+                                        fluid(maxWidth: 768, quality: 80) {
                                         ...GatsbyImageSharpFluid_withWebp
                                         }
                                     }

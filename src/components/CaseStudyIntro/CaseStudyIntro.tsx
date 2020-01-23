@@ -102,28 +102,28 @@ const CaseStudyIntro = (props: CaseStudyIntroProps) => {
                             query HeroImagesQuery {
                                 cinebody: file(relativePath: { eq: "Cinebody-Hero@2x.png" }) {
                                     childImageSharp {
-                                        fluid(maxWidth: 1200, quality: 70) {
+                                        fluid(maxWidth: 1200, quality: 80) {
                                         ...GatsbyImageSharpFluid_withWebp
                                         }
                                     }
                                 }
                                 heartwood: file(relativePath: { eq: "Heartwood-Hero@2x.png" }) {
                                     childImageSharp {
-                                        fluid(maxWidth: 1200, quality: 70) {
+                                        fluid(maxWidth: 1200, quality: 80) {
                                         ...GatsbyImageSharpFluid_withWebp
                                         }
                                     }
                                 }
                                 geosure: file(relativePath: { eq: "GeoSure-Hero@2x.png" }) {
                                     childImageSharp {
-                                        fluid(maxWidth: 1200, quality: 70) {
+                                        fluid(maxWidth: 1200, quality: 80) {
                                         ...GatsbyImageSharpFluid_withWebp
                                         }
                                     }
                                 }
                                 sprucelabs: file(relativePath: { eq: "Spruce-Labs-Hero@2x.png" }) {
                                     childImageSharp {
-                                        fluid(maxWidth: 1200, quality: 70) {
+                                        fluid(maxWidth: 1200, quality: 80) {
                                         ...GatsbyImageSharpFluid_withWebp
                                         }
                                     }
