@@ -23,28 +23,28 @@ const CaseStudyLink = (props: CaseStudyLinkProps) => {
                                 cinebody: file(relativePath: { eq: "Cinebody-Thumb@2x.png" }) {
                                     childImageSharp {
                                         fluid(maxWidth: 768, quality: 80) {
-                                        ...GatsbyImageSharpFluid_withWebp
+                                        ...GatsbyImageSharpFluid_noBase64
                                         }
                                     }
                                 }
                                 heartwood: file(relativePath: { eq: "Heartwood-Thumb@2x.png" }) {
                                     childImageSharp {
                                         fluid(maxWidth: 768, quality: 80) {
-                                        ...GatsbyImageSharpFluid_withWebp
+                                        ...GatsbyImageSharpFluid_noBase64
                                         }
                                     }
                                 }
                                 geosure: file(relativePath: { eq: "GeoSure-Thumb@2x.png" }) {
                                     childImageSharp {
                                         fluid(maxWidth: 768, quality: 80) {
-                                        ...GatsbyImageSharpFluid_withWebp
+                                        ...GatsbyImageSharpFluid_noBase64
                                         }
                                     }
                                 }
                                 sprucelabs: file(relativePath: { eq: "Spruce-Labs-Thumb@2x.png" }) {
                                     childImageSharp {
                                         fluid(maxWidth: 768, quality: 80) {
-                                        ...GatsbyImageSharpFluid_withWebp
+                                        ...GatsbyImageSharpFluid_noBase64
                                         }
                                     }
                                 }
