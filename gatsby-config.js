@@ -4,7 +4,7 @@ module.exports = {
     description: `Hi, I’m Jeremy. I’m a designer who believes in making things better than they need to be.`,
     author: `@jtinianow`,
     // TODO: Change this before going live
-    siteUrl: 'https://tinyeahno.com/'
+    siteUrl: 'https://tinyeahno.com'
   },
   pathPrefix: '/tinyeahno-2020',
   plugins: [

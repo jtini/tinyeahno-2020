@@ -56,7 +56,7 @@ function SEO({ description, lang, meta, title }: { description: string, lang: st
         },
         {
           property: `og:image`,
-          content: shareImage,
+          content: `${siteUrl}${shareImage}`,
         },
         {
           property: `og:image:width`,
@@ -84,7 +84,7 @@ function SEO({ description, lang, meta, title }: { description: string, lang: st
         },
         {
           name: `twitter:image`,
-          content: shareImage,
+          content: `${siteUrl}${shareImage}`,
         },
       ].concat(meta)}
       link={[
