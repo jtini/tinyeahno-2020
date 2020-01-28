@@ -1,1 +1,11 @@
 @import "../../styles/base";
+
+.sticky-text {
+    display: flex;
+    align-items: flex-start;
+}
+
+.sticky-text__sticky-col {
+    position: sticky;
+    top: 0;
+}
