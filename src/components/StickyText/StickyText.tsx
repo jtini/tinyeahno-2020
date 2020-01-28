@@ -2,7 +2,8 @@ import React from 'react'
 import './StickyText.scss'
 
 interface StickyTextProps {
-    children: React.ReactChild
+    children: React.ReactChild,
+    maxWidth?: number
 }
 
 export const StickyColumn = (props: StickyTextProps) => {
@@ -15,9 +16,11 @@ export const StickyColumn = (props: StickyTextProps) => {
 }
 
 export const StaticColumn = (props: StickyTextProps) => {
-    const { children } = props;
+    const { children, maxWidth } = props;
     return (
-        <div className="sticky-text__static-col">
+        <div className="sticky-text__static-col" style={{
+            maxWidth: maxWidth || 'auto'
+        }}>
             {children}
         </div>
     )

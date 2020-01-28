@@ -10,12 +10,11 @@ import CaseStudyConclusion from '../components/CaseStudyConclusion/CaseStudyConc
 import NextCaseStudy from '../components/NextCaseStudy/NextCaseStudy'
 import Wrapper from '../components/Wrapper/Wrapper'
 import Container from '../components/Container/Container'
-import StickyText, { StickyColumn, StaticColumn } from '../components/StickyText/StickyText'
+import SpruceLabs from '../components/SpruceLabs/SpruceLabs'
 import heroImage from '../images/Spruce-Labs-Hero@2x.png'
 import shareImage from '../images/Spruce-Labs-Thumb@2x.png'
 import cinebodyThumb from '../images/Cinebody-Thumb@2x.png'
 import logoLoop from './spruce-labs/Logo-Loop.gif'
-import colorCol from './spruce-labs/Color-Col@2x.png'
 
 <Helmet
     meta={[
@@ -71,19 +70,7 @@ The old logo always felt a bit off, for reasons the team found hard to vocalize.
 
 ![Logos and lockups in day mode and night mode](/spruce-labs/Day-Night@2x.png "Day and night contexts to match the core product.")
 
-<StickyText>
-    <StickyColumn>
-        <h2>A More Expansive Color Palette</h2>
-    </StickyColumn>
-    <StaticColumn>
-        <img src={colorCol} />
-    </StaticColumn>
-</StickyText>
-
-## A More Expansive Color Palette
-The old color palette was a bit spare when it came to expressiveness. We devised an approach that would focus on how we create contrast, rather than on specific colors. This enabled our creative team to try lots of ideas and push the envelope. At the same time, we had enough parameters to avoid visual chaos.
-
-![Early color explorations](/spruce-labs/Color-01@2x.png)
+<SpruceLabs.ColorSection />
 
 ![More refined color options based on temperature and value contrast.](/spruce-labs/Color-02@2x.png)
 
