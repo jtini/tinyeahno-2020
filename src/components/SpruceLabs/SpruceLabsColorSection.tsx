@@ -1,11 +1,9 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import Container from '../Container/Container'
-import Wrapper from '../Wrapper/Wrapper'
 import StickyText, { StickyColumn, StaticColumn } from '../StickyText/StickyText'
 
-export const ColorSection = () => {
+const SpruceLabsColorSection = () => {
     return (
         <StickyText>
             <>
@@ -30,8 +28,7 @@ export const ColorSection = () => {
                                 }
                             `}
                             render={data => {
-                                console.log({ data })
-                                return <Img fluid={data.colorCol.childImageSharp.fluid} />
+                                return <Img fluid={data.colorCol.childImageSharp.fluid} alt="Early color explorations" />
                             }}
                         />
                     </>
@@ -41,8 +38,5 @@ export const ColorSection = () => {
     )
 }
 
-const SpruceLabs = {
-    ColorSection
-}
 
-export default SpruceLabs
+export default SpruceLabsColorSection
