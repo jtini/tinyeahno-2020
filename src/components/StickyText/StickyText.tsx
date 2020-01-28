@@ -1,9 +1,11 @@
 import React from 'react'
+import cx from 'classnames'
 import './StickyText.scss'
 
 interface StickyTextProps {
     children: React.ReactChild,
-    maxWidth?: number
+    maxWidth?: number,
+    reverse?: boolean
 }
 
 export const StickyColumn = (props: StickyTextProps) => {
@@ -27,9 +29,11 @@ export const StaticColumn = (props: StickyTextProps) => {
 }
 
 const StickyText = (props: StickyTextProps) => {
-    const { children } = props;
+    const { children, reverse } = props;
     return (
-        <div className="sticky-text">
+        <div className={cx("sticky-text", {
+            "sticky-text--reverse": reverse
+        })}>
             {children}
         </div>
     )
