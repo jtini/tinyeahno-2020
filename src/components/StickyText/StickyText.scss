@@ -1,0 +1,69 @@
+@import "../../styles/base";
+
+.sticky-text {
+    padding: 0 1rem;
+    @media screen and (min-width: 760px) {
+        display: flex;
+        flex-flow: row;
+        align-items: flex-start;
+        justify-content: space-around;
+        max-width: 80rem;
+        margin-left: auto;
+        margin-right: auto;
+
+        &.sticky-text--reverse {
+            flex-flow: row-reverse;
+        }
+    }
+
+    .case-study__text {
+        margin-top: 1rem;
+    }
+}
+
+.sticky-text__sticky-col,
+.sticky-text__static-col {
+    @media screen and (min-width: 760px) {
+        width: calc(50% - 1rem);
+
+        &:first-child {
+            margin-right: 1rem;
+        }
+
+        &:last-child {
+            margin-left: 1rem;
+        }
+
+        .sticky-text--reverse & {
+            &:first-child {
+                margin-right: 0;
+                margin-left: 1rem;
+            }
+    
+            &:last-child {
+                margin-right: 1rem;
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.sticky-text__sticky-col {
+    @media screen and (min-width: 760px) {
+        position: sticky;
+        top: 0;
+        flex: 0 1 auto;
+        padding-top: 4rem;
+    }
+}
+
+.sticky-text__static-col {
+    padding-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (min-width: 760px) {
+        padding-top: 0; 
+        margin: 0;
+        flex: 1 0 auto;
+    }
+}
