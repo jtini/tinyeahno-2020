@@ -8,7 +8,11 @@ import Helmet from 'react-helmet'
 import CaseStudyIntro from '../components/CaseStudyIntro/CaseStudyIntro'
 import CaseStudyConclusion from '../components/CaseStudyConclusion/CaseStudyConclusion'
 import NextCaseStudy from '../components/NextCaseStudy/NextCaseStudy'
+import AutoplayVideo from '../components/AutoplayVideo/AutoplayVideo'
+import Wrapper from '../components/Wrapper/Wrapper'
+import Container from '../components/Container/Container'
 import heroImage from '../images/GeoSure-Hero@2x.png'
+import dayNightVid from './geosure/GeoSure-DayNight.mp4'
 import shareImage from '../images/Cinebody-Thumb@2x.png'
 import heartwoodThumb from '../images/Heartwood-Thumb@2x.png'
 
@@ -54,6 +58,12 @@ import heartwoodThumb from '../images/Heartwood-Thumb@2x.png'
     ]}
     darkBg
 />
+
+<Wrapper>
+    <Container>
+        <AutoplayVideo src={dayNightVid} muted autoPlay loop/>
+    </Container>
+</Wrapper>
 
 ![Before diving into UI design, I established an overall flavor for the design direction.](/geosure/GeoSure-Style@2x.png)
 
