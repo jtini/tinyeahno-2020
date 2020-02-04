@@ -1,6 +1,8 @@
 import React from 'react'
 import { Waypoint } from 'react-waypoint'
 import LazyLoad from 'react-lazyload';
+import cx from 'classnames'
+import './AutoplayVideo.scss'
 
 interface AutoplayVideoProps {
     src: string,
@@ -30,9 +32,9 @@ const AutoplayVideo = (props: AutoplayVideoProps) => {
                 onEnter={onEnter}
                 onLeave={onLeave}
             >
-                <div className={wrapperClassName}>
+                <div className={cx('autoplay-video', wrapperClassName)} >
                     <video
-                        className={className}
+                        className={cx('autoplay-video__video', className)}
                         ref={videoEl}
                         src={src}
                         loop
@@ -40,7 +42,7 @@ const AutoplayVideo = (props: AutoplayVideoProps) => {
                     />
                 </div>
             </Waypoint>
-        </LazyLoad>
+        </LazyLoad >
     )
 }
 
