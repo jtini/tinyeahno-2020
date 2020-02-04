@@ -8,12 +8,14 @@ interface AutoplayVideoProps {
 const AutoplayVideo = (props: AutoplayVideoProps) => {
     const { src } = props;
 
+    const videoEl = React.useRef(null)
+
     const onEnter = () => {
-        console.log('enter')
+        videoEl.current.play()
     }
 
     const onLeave = () => {
-        console.log('leave')
+        videoEl.current.pause()
     }
 
     return (
@@ -21,7 +23,12 @@ const AutoplayVideo = (props: AutoplayVideoProps) => {
             onEnter={onEnter}
             onLeave={onLeave}
         >
-            <video src={src} />
+            <video
+                ref={videoEl}
+                src={src}
+                loop
+                muted
+            />
         </Waypoint>
     )
 }
