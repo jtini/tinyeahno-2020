@@ -59,15 +59,6 @@ import heartwoodThumb from '../images/Heartwood-Thumb@2x.png'
     darkBg
 />
 
-<Wrapper>
-    <Container>
-        <AutoplayVideo
-        src={dayNightVid}
-        height={568}
-    />
-   </Container>
-</Wrapper>
-
 ![Before diving into UI design, I established an overall flavor for the design direction.](/geosure/GeoSure-Style@2x.png)
 
 In the first round of redesign, I coordinated with the GeoSure team to translate their recent re-branding efforts into a component library that adheres to ADA guidelines while staying true to the visual direction of the brand. I designed the experience of the initial features, as well as the new features in round two, and was responsible for overall visual direction and execution of the app. For user onboarding flows and empty states, I created a set of illustrations and icons.
@@ -76,9 +67,18 @@ In the first round of redesign, I coordinated with the GeoSure team to translate
 
 ![Custom icons for broad safety categories.](/geosure/Icons@2x.png)
 
-![Example of night and day modes.](/geosure/Nightmode-01@2x.png)
+<Wrapper>
+    <Container>
+        <AutoplayVideo
+            src={dayNightVid}
+            height={568}
+            wrapperClassName="ta-center"
+            className="dropshadow"
+        />
+   </Container>
+</Wrapper>
 
-![The night mode feature allows users to avoid drawing attention to themselves.](/geosure/Nightmode-02@2x.png)
+![The night mode feature allows users to avoid drawing attention to themselves.](/geosure/Nightmode-01@2x.png)
 
 ![The Location Detail view puts the overall safety score front and center followed by supporting and related information.](/geosure/Location@2x.png)
 

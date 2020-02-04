@@ -12,3 +12,7 @@ body {
     line-height: $line-height;
     font-variant-numeric: oldstyle-nums;
 }
+
+.dropshadow {
+    box-shadow: 0 1px 16px rgba(0,0,0,0.1);
+}

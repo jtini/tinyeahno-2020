@@ -4,11 +4,13 @@ import LazyLoad from 'react-lazyload';
 
 interface AutoplayVideoProps {
     src: string,
-    height: number
+    height: number,
+    className?: string,
+    wrapperClassName?: string
 }
 
 const AutoplayVideo = (props: AutoplayVideoProps) => {
-    const { src, height } = props;
+    const { src, height, className, wrapperClassName } = props;
 
     const videoEl = React.useRef(null)
 
@@ -28,12 +30,15 @@ const AutoplayVideo = (props: AutoplayVideoProps) => {
                 onEnter={onEnter}
                 onLeave={onLeave}
             >
-                <video
-                    ref={videoEl}
-                    src={src}
-                    loop
-                    muted
-                />
+                <div className={wrapperClassName}>
+                    <video
+                        className={className}
+                        ref={videoEl}
+                        src={src}
+                        loop
+                        muted
+                    />
+                </div>
             </Waypoint>
         </LazyLoad>
     )
