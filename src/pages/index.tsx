@@ -65,19 +65,19 @@ const caseStudies = {
 
 const socials = {
   dribbble: {
-    link: 'https://dribbble.com/jtini',
+    link: 'https://dribbble.com/tinyeahno',
     icon: dribbbleIcon
   },
   instagram: {
-    link: 'https://www.instagram.com/jermtee/',
+    link: 'https://www.instagram.com/tinyeahno',
     icon: instagramIcon
   },
   behance: {
-    link: 'https://www.behance.net/jtinianow',
+    link: 'https://www.behance.net/tinyeahno',
     icon: behanceIcon
   },
   twitter: {
-    link: 'https://twitter.com/jtinianow',
+    link: 'https://twitter.com/tinyeahno',
     icon: twitterIcon
   }
 }
