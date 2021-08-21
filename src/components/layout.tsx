@@ -20,6 +20,9 @@ import national2MedWoff2 from '../../static/national-2-web-medium.woff2'
 import etcTrispaceNarrowRegularWoff2 from '../../static/etctrispace-regularnarrow-webfont.woff2'
 import etcTrispaceNarrowRegularWoff from '../../static/etctrispace-regularnarrow-webfont.woff'
 
+import moretWoff from "../../static/Moret.woff"
+import moretWoff2 from "../../static/Moret.woff2"
+
 const Layout = ({ children, className }: { children: any, className?: string }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -36,6 +39,14 @@ const Layout = ({ children, className }: { children: any, className?: string }) 
       <Helmet>
         <style>
           {`
+          @font-face {
+            font-family: 'Moret';
+            src:  url(${moretWoff2}) format('woff2'),
+                  url(${moretWoff}) format('woff');
+            font-weight: 300;
+            font-style: normal;
+          }
+
           @font-face {
             font-family: 'etc_trispaceregular_narrow';
             src: url(${etcTrispaceNarrowRegularWoff2}) format('woff2'),
