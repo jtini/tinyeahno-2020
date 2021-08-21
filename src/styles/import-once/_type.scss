@@ -42,20 +42,6 @@ p {
 .display {
     @extend %display;
     @extend %book;
-
-    &.foit {
-        opacity: 0;
-        font-family: Georgia, serif;
-        letter-spacing: -0.1em;
-
-        .wf-moret-n3-active &,
-        .wf-moret-n3-inactive & {
-            @extend %display;
-            transition: opacity 200ms ease-out;
-            opacity: 1;
-            letter-spacing: -1px;
-        }
-    }
 }
 
 .mono {
