@@ -126,7 +126,7 @@ const IndexPage = () => (
 
     <section className="landing-page-about">
       <div className="landing-page-about__inner">
-        <p className="landing-page-about__copyright small-body">© Jeremy Tinianow 2021 · <Link to="/colophon" id="colophon-link">Colophon</Link></p>
+        <p className="landing-page-about__copyright small-body">© Jeremy Tinianow 2024 · <Link to="/colophon" id="colophon-link">Colophon</Link></p>
       </div>
     </section>
   </Layout>
