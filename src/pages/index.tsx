@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import CaseStudyLink from '../components/CaseStudyLink/CaseStudyLink'
 import "./landing-page.scss"
 
+const digColorsThumb = require('../images/DIG-Colors-Thumb@2x.png')
 const hwThumb = require('../images/Heartwood-Thumb@2x.png')
 const cinebodyThumb = require('../images/Cinebody-Thumb@2x.png')
 const geosureThumb = require('../images/GeoSure-Thumb@2x.png')
@@ -17,6 +18,17 @@ const behanceIcon = require('../assets/Behance-Icon.svg')
 const twitterIcon = require('../assets/Twitter-Icon.svg')
 
 const caseStudies = {
+  digColors: {
+    image: {
+      src: digColorsThumb,
+      width: 736,
+      height: 460
+    },
+    title: "DIG Colors",
+    description: "A flexible color system to scale the Dropbox brand",
+    tags: "Design Strategy, Visual Design",
+    slug: "dig-colors"
+  },
   heartwood: {
     image: {
       src: hwThumb,
@@ -114,7 +126,7 @@ const IndexPage = () => (
 
     <section className="landing-page-about">
       <div className="landing-page-about__inner">
-        <p className="landing-page-about__copyright small-body">© Jeremy Tinianow 2021 · <Link to="/colophon" id="colophon-link">Colophon</Link></p>
+        <p className="landing-page-about__copyright small-body">© Jeremy Tinianow 2024 · <Link to="/colophon" id="colophon-link">Colophon</Link></p>
       </div>
     </section>
   </Layout>

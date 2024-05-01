@@ -197,7 +197,7 @@ const Template = (props: TemplateProps) => {
               })}
             </div>
           </div>
-          <p className="case-study-footer__copyright-text">© Jeremy Tinianow 2021</p>
+          <p className="case-study-footer__copyright-text">© Jeremy Tinianow 2024</p>
         </footer>
       </MDXProvider>
     </Layout>
