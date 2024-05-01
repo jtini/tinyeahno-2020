@@ -7,7 +7,21 @@ import Helmet from 'react-helmet'
 import CaseStudyIntro from '../components/CaseStudyIntro/CaseStudyIntro'
 import CaseStudyConclusion from '../components/CaseStudyConclusion/CaseStudyConclusion'
 import NextCaseStudy from '../components/NextCaseStudy/NextCaseStudy'
+import shareImage from '../images/DIG-Colors-Thumb@2x.png'
 import heartwoodThumb from '../images/Heartwood-Thumb@2x.png'
+
+<Helmet
+    meta={[
+        {
+            property: 'og:image',
+            content: `https://tinyeahno.com${shareImage}`
+        },
+        {
+            name: 'twitter:image',
+            content: `https://tinyeahno.com${shareImage}`
+        }
+    ]}
+/>
 
 <CaseStudyIntro
     title="DIG Colors"
